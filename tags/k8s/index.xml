@@ -8,17 +8,6 @@
     <language>en-us</language>
     <lastBuildDate>Wed, 26 Aug 2020 00:00:00 +0000</lastBuildDate><atom:link href="https://alexdess.cloud/tags/k8s/index.xml" rel="self" type="application/rss+xml" />
     <item>
-      <title>K8s ClusterAPI</title>
-      <link>https://alexdess.cloud/posts/clusterapivmc/</link>
-      <pubDate>Thu, 31 Oct 2019 00:00:00 +0000</pubDate>
-      
-      <guid>https://alexdess.cloud/posts/clusterapivmc/</guid>
-      <description>What is the CAPI Project about? ClusterAPI is a project focussing on the lifecycle management day0 to day2 in order to ease the management for K8s Clusters. The project explains itself with:
- The Cluster API is a Kubernetes project to bring declarative, Kubernetes-style APIs to cluster creation, configuration, and management.
- Get the environment ready In order to leverage all the functionality please make sure you´re using the latest version.</description>
-    </item>
-    
-    <item>
       <title>Prometheus - From Metrics to Insights</title>
       <link>https://alexdess.cloud/posts/prometheus/</link>
       <pubDate>Wed, 26 Aug 2020 00:00:00 +0000</pubDate>
@@ -35,6 +24,17 @@
       <guid>https://alexdess.cloud/posts/appmodernization/</guid>
       <description>In this blogpost we´re going to perform an exemplary application modernization. I wanted to provide an easy and understandable example how an existing application can be modernized in order to take advantages of modern application architecture by leveraging Kubernetes.
 Modernising parts of an existing application is what I observed in real world customer scenarios. Parts of an application are modernized to take the maximum value compared to the high effort of refactoring the whole application.</description>
+    </item>
+    
+    <item>
+      <title>K8s ClusterAPI</title>
+      <link>https://alexdess.cloud/posts/clusterapivmc/</link>
+      <pubDate>Thu, 31 Oct 2019 00:00:00 +0000</pubDate>
+      
+      <guid>https://alexdess.cloud/posts/clusterapivmc/</guid>
+      <description>What is the CAPI Project about? ClusterAPI is a project focussing on the lifecycle management day0 to day2 in order to ease the management for K8s Clusters. The project explains itself with:
+ The Cluster API is a Kubernetes project to bring declarative, Kubernetes-style APIs to cluster creation, configuration, and management.
+ Get the environment ready In order to leverage all the functionality please make sure you´re using the latest version.</description>
     </item>
     
   </channel>
