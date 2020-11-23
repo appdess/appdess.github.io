@@ -3,13 +3,13 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   
   <url>
-    <loc>https://alexdess.cloud/posts/tkg/</loc>
+    <loc>https://alexdess.cloud/posts/tkgvmc/</loc>
     <lastmod>2019-09-14T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>https://alexdess.cloud/posts/tkgonvmc/</loc>
-    <lastmod>2020-04-15T00:00:00+00:00</lastmod>
+    <loc>https://alexdess.cloud/posts/tkg/</loc>
+    <lastmod>2019-09-14T00:00:00+00:00</lastmod>
   </url>
   
   <url>
@@ -53,16 +53,6 @@
   </url>
   
   <url>
-    <loc>https://alexdess.cloud/tags/storage/</loc>
-    <lastmod>2020-04-15T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://alexdess.cloud/tags/tkg/</loc>
-    <lastmod>2020-04-15T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
     <loc>https://alexdess.cloud/posts/app-modernization-with-vmc/</loc>
     <lastmod>2020-01-30T00:00:00+00:00</lastmod>
   </url>
@@ -79,6 +69,11 @@
   
   <url>
     <loc>https://alexdess.cloud/posts/cluster-api/</loc>
+    <lastmod>2019-10-31T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://alexdess.cloud/tags/storage/</loc>
     <lastmod>2019-10-31T00:00:00+00:00</lastmod>
   </url>
   
