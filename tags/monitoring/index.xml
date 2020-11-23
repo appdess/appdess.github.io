@@ -9,10 +9,10 @@
     <lastBuildDate>Wed, 26 Aug 2020 00:00:00 +0000</lastBuildDate><atom:link href="https://alexdess.cloud/tags/monitoring/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Prometheus - From Metrics to Insights</title>
-      <link>https://alexdess.cloud/posts/from-metrics-to-insights/</link>
+      <link>https://alexdess.cloud/posts/prometheus/</link>
       <pubDate>Wed, 26 Aug 2020 00:00:00 +0000</pubDate>
       
-      <guid>https://alexdess.cloud/posts/from-metrics-to-insights/</guid>
+      <guid>https://alexdess.cloud/posts/prometheus/</guid>
       <description>Leveraging the Prometheus Operator on VMC Prometheus was the second project which joined the Cloud Native Computing foundation after Kubernetes in 2016. Originally it was founded 2012 at Soundcloud but is now completely vendor independent and open source. A lot companies have already adopted Prometheus, and the project has a highly active community. Customers which are running VMware Tanzu Kubernetes Grid+ are provided with full Enterprise support included with their TKG+ subscription.</description>
     </item>
     

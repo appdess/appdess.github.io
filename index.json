@@ -49,7 +49,7 @@
 	"content": ""
 },
 {
-	"uri": "https://alexdess.cloud/posts/from-metrics-to-insights/",
+	"uri": "https://alexdess.cloud/posts/prometheus/",
 	"title": "Prometheus - From Metrics to Insights",
 	"tags": ["K8s", "VMC", "monitoring"],
 	"description": "Prometheus Monitoring with TKG+ on VMC",
