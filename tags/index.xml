@@ -35,6 +35,24 @@
     </item>
     
     <item>
+      <title>Storage</title>
+      <link>https://alexdess.cloud/tags/storage/</link>
+      <pubDate>Wed, 15 Apr 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://alexdess.cloud/tags/storage/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>TKG</title>
+      <link>https://alexdess.cloud/tags/tkg/</link>
+      <pubDate>Wed, 15 Apr 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://alexdess.cloud/tags/tkg/</guid>
+      <description></description>
+    </item>
+    
+    <item>
       <title>capv</title>
       <link>https://alexdess.cloud/tags/capv/</link>
       <pubDate>Thu, 30 Jan 2020 00:00:00 +0000</pubDate>
@@ -49,15 +67,6 @@
       <pubDate>Thu, 30 Jan 2020 00:00:00 +0000</pubDate>
       
       <guid>https://alexdess.cloud/tags/cluster-api/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>Storage</title>
-      <link>https://alexdess.cloud/tags/storage/</link>
-      <pubDate>Thu, 31 Oct 2019 00:00:00 +0000</pubDate>
-      
-      <guid>https://alexdess.cloud/tags/storage/</guid>
       <description></description>
     </item>
     
