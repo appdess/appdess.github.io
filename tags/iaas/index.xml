@@ -9,10 +9,10 @@
     <lastBuildDate>Sat, 14 Sep 2019 00:00:00 +0000</lastBuildDate><atom:link href="https://alexdess.cloud/tags/iaas/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>vcgo test</title>
-      <link>https://alexdess.cloud/posts/vcgo/</link>
+      <link>https://alexdess.cloud/posts/tkg/</link>
       <pubDate>Sat, 14 Sep 2019 00:00:00 +0000</pubDate>
       
-      <guid>https://alexdess.cloud/posts/vcgo/</guid>
+      <guid>https://alexdess.cloud/posts/tkg/</guid>
       <description>Automate your VM Deployments In this Blogpost you will learn to leverage one of my favourite automation tools called &amp;ldquo;GoVC&amp;rdquo; to automate your virtual machine and OVF-Deployments for VMware Cloud on AWS and vSphere. The tool does a great job making in creating repeatable deployments of VMs and OVFs.
 If you are working with lab environments it´s key to have a repeatable and reliable way to deploy your VMs without having to enter a lot data over and over again.</description>
     </item>
