@@ -19,16 +19,6 @@ Before we start i would like to introduce you to the basic concepts of Tanzu Kub
     </item>
     
     <item>
-      <title>TKG on VMC Dummy</title>
-      <link>https://alexdess.cloud/posts/tkg/</link>
-      <pubDate>Sat, 14 Sep 2019 00:00:00 +0000</pubDate>
-      
-      <guid>https://alexdess.cloud/posts/tkg/</guid>
-      <description>Automate your VM Deployments In this Blogpost you will learn to leverage one of my favourite automation tools called &amp;ldquo;GoVC&amp;rdquo; to automate your virtual machine and OVF-Deployments for VMware Cloud on AWS and vSphere. The tool does a great job making in creating repeatable deployments of VMs and OVFs.
-If you are working with lab environments it´s key to have a repeatable and reliable way to deploy your VMs without having to enter a lot data over and over again.</description>
-    </item>
-    
-    <item>
       <title>GOVC</title>
       <link>https://alexdess.cloud/posts/govc/</link>
       <pubDate>Sat, 14 Sep 2019 00:00:00 +0000</pubDate>
@@ -49,20 +39,20 @@ If you are working with lab environments it´s key to have a repeatable and reli
     
     <item>
       <title>App modernization with VMC</title>
-      <link>https://alexdess.cloud/posts/app-modernization-with-vmc/</link>
+      <link>https://alexdess.cloud/posts/appmodernization/</link>
       <pubDate>Thu, 30 Jan 2020 00:00:00 +0000</pubDate>
       
-      <guid>https://alexdess.cloud/posts/app-modernization-with-vmc/</guid>
+      <guid>https://alexdess.cloud/posts/appmodernization/</guid>
       <description>In this blogpost we´re going to perform an exemplary application modernization. I wanted to provide an easy and understandable example how an existing application can be modernized in order to take advantages of modern application architecture by leveraging Kubernetes.
 Modernising parts of an existing application is what I observed in real world customer scenarios. Parts of an application are modernized to take the maximum value compared to the high effort of refactoring the whole application.</description>
     </item>
     
     <item>
       <title>K8s ClusterAPI</title>
-      <link>https://alexdess.cloud/posts/cluster-api/</link>
+      <link>https://alexdess.cloud/posts/clusterapi/</link>
       <pubDate>Thu, 31 Oct 2019 00:00:00 +0000</pubDate>
       
-      <guid>https://alexdess.cloud/posts/cluster-api/</guid>
+      <guid>https://alexdess.cloud/posts/clusterapi/</guid>
       <description>What is the CAPI Project about? ClusterAPI is a project focussing on the lifecycle management day0 to day2 in order to ease the management for K8s Clusters. The project explains itself with:
  The Cluster API is a Kubernetes project to bring declarative, Kubernetes-style APIs to cluster creation, configuration, and management.
  Get the environment ready In order to leverage all the functionality please make sure you´re using the latest version.</description>

@@ -8,11 +8,6 @@
   </url>
   
   <url>
-    <loc>https://alexdess.cloud/posts/tkg/</loc>
-    <lastmod>2019-09-14T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
     <loc>https://alexdess.cloud/posts/govc/</loc>
     <lastmod>2019-09-14T00:00:00+00:00</lastmod>
   </url>
@@ -53,7 +48,7 @@
   </url>
   
   <url>
-    <loc>https://alexdess.cloud/posts/app-modernization-with-vmc/</loc>
+    <loc>https://alexdess.cloud/posts/appmodernization/</loc>
     <lastmod>2020-01-30T00:00:00+00:00</lastmod>
   </url>
   
@@ -68,7 +63,7 @@
   </url>
   
   <url>
-    <loc>https://alexdess.cloud/posts/cluster-api/</loc>
+    <loc>https://alexdess.cloud/posts/clusterapi/</loc>
     <lastmod>2019-10-31T00:00:00+00:00</lastmod>
   </url>
   

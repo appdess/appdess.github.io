@@ -9,10 +9,10 @@
     <lastBuildDate>Thu, 30 Jan 2020 00:00:00 +0000</lastBuildDate><atom:link href="https://alexdess.cloud/tags/capv/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>App modernization with VMC</title>
-      <link>https://alexdess.cloud/posts/app-modernization-with-vmc/</link>
+      <link>https://alexdess.cloud/posts/appmodernization/</link>
       <pubDate>Thu, 30 Jan 2020 00:00:00 +0000</pubDate>
       
-      <guid>https://alexdess.cloud/posts/app-modernization-with-vmc/</guid>
+      <guid>https://alexdess.cloud/posts/appmodernization/</guid>
       <description>In this blogpost we´re going to perform an exemplary application modernization. I wanted to provide an easy and understandable example how an existing application can be modernized in order to take advantages of modern application architecture by leveraging Kubernetes.
 Modernising parts of an existing application is what I observed in real world customer scenarios. Parts of an application are modernized to take the maximum value compared to the high effort of refactoring the whole application.</description>
     </item>
