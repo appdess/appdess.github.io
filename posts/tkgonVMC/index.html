@@ -4,29 +4,29 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="generator" content="Hugo 0.78.2" />
-    <meta name="description" content="TKG 1.0 is GA!">
+    <meta name="description" content="Speed up your Cloud Deployments - with repeatable automation">
 <meta name="author" content="Alexander Dess">
 
     <link rel="shortcut icon" href="/images/favicon.png" type="image/x-icon" />
 
-    <title>TKG on VMC - alexdess.cloud</title>
+    <title>GOVC - alexdess.cloud</title>
 
     
-    <link href="/css/nucleus.css?1606166311" rel="stylesheet">
-    <link href="/css/fontawesome-all.min.css?1606166311" rel="stylesheet">
-    <link href="/css/hybrid.css?1606166311" rel="stylesheet">
-    <link href="/css/featherlight.min.css?1606166311" rel="stylesheet">
-    <link href="/css/perfect-scrollbar.min.css?1606166311" rel="stylesheet">
-    <link href="/css/auto-complete.css?1606166311" rel="stylesheet">
-    <link href="/css/atom-one-dark-reasonable.css?1606166311" rel="stylesheet">
-    <link href="/css/theme.css?1606166311" rel="stylesheet">
-    <link href="/css/hugo-theme.css?1606166311" rel="stylesheet">
+    <link href="/css/nucleus.css?1606166491" rel="stylesheet">
+    <link href="/css/fontawesome-all.min.css?1606166491" rel="stylesheet">
+    <link href="/css/hybrid.css?1606166491" rel="stylesheet">
+    <link href="/css/featherlight.min.css?1606166491" rel="stylesheet">
+    <link href="/css/perfect-scrollbar.min.css?1606166491" rel="stylesheet">
+    <link href="/css/auto-complete.css?1606166491" rel="stylesheet">
+    <link href="/css/atom-one-dark-reasonable.css?1606166491" rel="stylesheet">
+    <link href="/css/theme.css?1606166491" rel="stylesheet">
+    <link href="/css/hugo-theme.css?1606166491" rel="stylesheet">
     
-    <link href="/css/theme-blue.css?1606166311" rel="stylesheet">
+    <link href="/css/theme-blue.css?1606166491" rel="stylesheet">
     
-    <link href="/css/foo.css?1606166311" rel="stylesheet"><link href="/css/bar.css?1606166311" rel="stylesheet">
+    <link href="/css/foo.css?1606166491" rel="stylesheet"><link href="/css/bar.css?1606166491" rel="stylesheet">
 
-    <script src="/js/jquery-3.3.1.min.js?1606166311"></script>
+    <script src="/js/jquery-3.3.1.min.js?1606166491"></script>
 
     <style>
       :root #header + #content > #left > #rlblock_left{
@@ -54,14 +54,14 @@
     <span data-search-clear=""><i class="fas fa-times"></i></span>
 </div>
 
-<script type="text/javascript" src="/js/lunr.min.js?1606166311"></script>
-<script type="text/javascript" src="/js/auto-complete.js?1606166311"></script>
+<script type="text/javascript" src="/js/lunr.min.js?1606166491"></script>
+<script type="text/javascript" src="/js/auto-complete.js?1606166491"></script>
 <script type="text/javascript">
     
         var baseurl = "https:\/\/alexdess.cloud";
     
 </script>
-<script type="text/javascript" src="/js/search.js?1606166311"></script>
+<script type="text/javascript" src="/js/search.js?1606166491"></script>
 
     
   </div>
@@ -135,13 +135,13 @@
  
   
     
-    <li data-nav-id="/posts/from-metrics-to-insights/" title="Prometheus - From Metrics to Insights" class="dd-item
-        
-        
+    <li data-nav-id="/posts/tkgonvmc/" title="GOVC" class="dd-item
+        parent
+        active
         
         ">
-      <a href="/posts/from-metrics-to-insights/">
-          Prometheus - From Metrics to Insights
+      <a href="/posts/tkgonvmc/">
+          GOVC
           
       </a>
       
@@ -161,13 +161,13 @@
  
   
     
-    <li data-nav-id="/posts/tkgonvmc/" title="TKG on VMC" class="dd-item
-        parent
-        active
+    <li data-nav-id="/posts/from-metrics-to-insights/" title="Prometheus - From Metrics to Insights" class="dd-item
+        
+        
         
         ">
-      <a href="/posts/tkgonvmc/">
-          TKG on VMC
+      <a href="/posts/from-metrics-to-insights/">
+          Prometheus - From Metrics to Insights
           
       </a>
       
@@ -275,7 +275,7 @@
                   <span class="links">
                  
                  
-                   TKG on VMC
+                   GOVC
                  
                   </span>
                 </div>
@@ -310,13 +310,11 @@
         
 <div class="tags">
 
-  <a class="tag-link" href="/tags/k8s">K8s</a>
+  <a class="tag-link" href="/tags/iaas">IaaS</a>
+
+  <a class="tag-link" href="/tags/automation">Automation</a>
 
   <a class="tag-link" href="/tags/vmc">VMC</a>
-
-  <a class="tag-link" href="/tags/storage">Storage</a>
-
-  <a class="tag-link" href="/tags/tkg">TKG</a>
 
 </div>
 
@@ -326,7 +324,7 @@
           
             <h1>
               
-              TKG on VMC
+              GOVC
             </h1>
           
 
@@ -334,7 +332,12 @@
 
 
 
-	<p>Tanzu Kubernetes Grid is GA! In this blogpost I am going to show you how easy it is to setup, configure and lifecycle enterprise K8s Clusters and applications on VMware Cloud.</p>
+	<p>title: &ldquo;TKG on VMC&rdquo;
+tags: [K8s,VMC,Storage, TKG]
+featured_image: &lsquo;/images/tkg-concepts.png&rsquo;
+date: 2020-04-15
+description: &ldquo;TKG 1.0 is GA!&rdquo;</p>
+<p>Tanzu Kubernetes Grid is GA! In this blogpost I am going to show you how easy it is to setup, configure and lifecycle enterprise K8s Clusters and applications on VMware Cloud.</p>
 <p>We will deploy Tanzu Kubernetes Grid to VMConAWS as well as an application which uses Cloud Native vSAN Storage and existing services on VMConAWS to expose it to the outside world.</p>
 <p>Before we start i would like to introduce you to the basic concepts of Tanzu Kubernetes Grid. Tanzu Kubernetes Grid leverages Cluster API to bring declarative Kubernetes style APIs which can be leveraged for the creation, configuration and management of Kubernetes Clusters itself.</p>
 <p>You can think of a K8s Cluster - our TKG Management Cluster which is provisioning TKG Workload Clusters.
@@ -669,22 +672,6 @@ myfirstpvc   Bound    pvc-949b6d58-4a6e-4496-bb0e-a203a741acb7   3Gi        RWO 
             
                 
                     
-                
-                
-
-                    
-                    
-                    
-
-                    
-            
-        
-                    
-                        
-            
-            
-                
-                    
                     
                 
                 
@@ -704,6 +691,22 @@ myfirstpvc   Bound    pvc-949b6d58-4a6e-4496-bb0e-a203a741acb7   3Gi        RWO 
                     
                         
                         
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
                     
                 
                 
@@ -750,19 +753,19 @@ myfirstpvc   Bound    pvc-949b6d58-4a6e-4496-bb0e-a203a741acb7   3Gi        RWO 
     <div style="left: -1000px; overflow: scroll; position: absolute; top: -1000px; border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;">
       <div style="border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;"></div>
     </div>
-    <script src="/js/clipboard.min.js?1606166311"></script>
-    <script src="/js/perfect-scrollbar.min.js?1606166311"></script>
-    <script src="/js/perfect-scrollbar.jquery.min.js?1606166311"></script>
-    <script src="/js/jquery.sticky.js?1606166311"></script>
-    <script src="/js/featherlight.min.js?1606166311"></script>
-    <script src="/js/highlight.pack.js?1606166311"></script>
+    <script src="/js/clipboard.min.js?1606166491"></script>
+    <script src="/js/perfect-scrollbar.min.js?1606166491"></script>
+    <script src="/js/perfect-scrollbar.jquery.min.js?1606166491"></script>
+    <script src="/js/jquery.sticky.js?1606166491"></script>
+    <script src="/js/featherlight.min.js?1606166491"></script>
+    <script src="/js/highlight.pack.js?1606166491"></script>
     <script>hljs.initHighlightingOnLoad();</script>
-    <script src="/js/modernizr.custom-3.6.0.js?1606166311"></script>
-    <script src="/js/learn.js?1606166311"></script>
-    <script src="/js/hugo-learn.js?1606166311"></script>
+    <script src="/js/modernizr.custom-3.6.0.js?1606166491"></script>
+    <script src="/js/learn.js?1606166491"></script>
+    <script src="/js/hugo-learn.js?1606166491"></script>
     
         
-            <script src="/mermaid/mermaid.js?1606166311"></script>
+            <script src="/mermaid/mermaid.js?1606166491"></script>
         
         <script>
             mermaid.initialize({ startOnLoad: true });

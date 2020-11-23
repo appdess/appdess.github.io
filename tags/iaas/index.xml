@@ -17,5 +17,16 @@
 If you are working with lab environments it´s key to have a repeatable and reliable way to deploy your VMs without having to enter a lot data over and over again.</description>
     </item>
     
+    <item>
+      <title>GOVC</title>
+      <link>https://alexdess.cloud/posts/tkgonvmc/</link>
+      <pubDate>Sat, 14 Sep 2019 00:00:00 +0000</pubDate>
+      
+      <guid>https://alexdess.cloud/posts/tkgonvmc/</guid>
+      <description>title: &amp;ldquo;TKG on VMC&amp;rdquo; tags: [K8s,VMC,Storage, TKG] featured_image: &amp;lsquo;/images/tkg-concepts.png&amp;rsquo; date: 2020-04-15 description: &amp;ldquo;TKG 1.0 is GA!&amp;rdquo;
+Tanzu Kubernetes Grid is GA! In this blogpost I am going to show you how easy it is to setup, configure and lifecycle enterprise K8s Clusters and applications on VMware Cloud.
+We will deploy Tanzu Kubernetes Grid to VMConAWS as well as an application which uses Cloud Native vSAN Storage and existing services on VMConAWS to expose it to the outside world.</description>
+    </item>
+    
   </channel>
 </rss>
