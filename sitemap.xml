@@ -3,6 +3,11 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   
   <url>
+    <loc>https://alexdess.cloud/posts/clusterapivmc/</loc>
+    <lastmod>2019-10-31T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
     <loc>https://alexdess.cloud/posts/prometheus/</loc>
     <lastmod>2020-08-26T00:00:00+00:00</lastmod>
   </url>
@@ -60,11 +65,6 @@
   <url>
     <loc>https://alexdess.cloud/tags/cluster-api/</loc>
     <lastmod>2020-01-30T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://alexdess.cloud/posts/clusterapi/</loc>
-    <lastmod>2019-10-31T00:00:00+00:00</lastmod>
   </url>
   
   <url>

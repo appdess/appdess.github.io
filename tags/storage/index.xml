@@ -9,10 +9,10 @@
     <lastBuildDate>Thu, 31 Oct 2019 00:00:00 +0000</lastBuildDate><atom:link href="https://alexdess.cloud/tags/storage/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>K8s ClusterAPI</title>
-      <link>https://alexdess.cloud/posts/clusterapi/</link>
+      <link>https://alexdess.cloud/posts/clusterapivmc/</link>
       <pubDate>Thu, 31 Oct 2019 00:00:00 +0000</pubDate>
       
-      <guid>https://alexdess.cloud/posts/clusterapi/</guid>
+      <guid>https://alexdess.cloud/posts/clusterapivmc/</guid>
       <description>What is the CAPI Project about? ClusterAPI is a project focussing on the lifecycle management day0 to day2 in order to ease the management for K8s Clusters. The project explains itself with:
  The Cluster API is a Kubernetes project to bring declarative, Kubernetes-style APIs to cluster creation, configuration, and management.
  Get the environment ready In order to leverage all the functionality please make sure you´re using the latest version.</description>
