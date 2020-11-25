@@ -12,21 +12,21 @@
     <title>TMC for VMC - alexdess.cloud</title>
 
     
-    <link href="/css/nucleus.css?1606311855" rel="stylesheet">
-    <link href="/css/fontawesome-all.min.css?1606311855" rel="stylesheet">
-    <link href="/css/hybrid.css?1606311855" rel="stylesheet">
-    <link href="/css/featherlight.min.css?1606311855" rel="stylesheet">
-    <link href="/css/perfect-scrollbar.min.css?1606311855" rel="stylesheet">
-    <link href="/css/auto-complete.css?1606311855" rel="stylesheet">
-    <link href="/css/atom-one-dark-reasonable.css?1606311855" rel="stylesheet">
-    <link href="/css/theme.css?1606311855" rel="stylesheet">
-    <link href="/css/hugo-theme.css?1606311855" rel="stylesheet">
+    <link href="/css/nucleus.css?1606320765" rel="stylesheet">
+    <link href="/css/fontawesome-all.min.css?1606320765" rel="stylesheet">
+    <link href="/css/hybrid.css?1606320765" rel="stylesheet">
+    <link href="/css/featherlight.min.css?1606320765" rel="stylesheet">
+    <link href="/css/perfect-scrollbar.min.css?1606320765" rel="stylesheet">
+    <link href="/css/auto-complete.css?1606320765" rel="stylesheet">
+    <link href="/css/atom-one-dark-reasonable.css?1606320765" rel="stylesheet">
+    <link href="/css/theme.css?1606320765" rel="stylesheet">
+    <link href="/css/hugo-theme.css?1606320765" rel="stylesheet">
     
-    <link href="/css/theme-blue.css?1606311855" rel="stylesheet">
+    <link href="/css/theme-blue.css?1606320765" rel="stylesheet">
     
-    <link href="/css/foo.css?1606311855" rel="stylesheet"><link href="/css/bar.css?1606311855" rel="stylesheet">
+    <link href="/css/foo.css?1606320765" rel="stylesheet"><link href="/css/bar.css?1606320765" rel="stylesheet">
 
-    <script src="/js/jquery-3.3.1.min.js?1606311855"></script>
+    <script src="/js/jquery-3.3.1.min.js?1606320765"></script>
 
     <style>
       :root #header + #content > #left > #rlblock_left{
@@ -54,14 +54,14 @@
     <span data-search-clear=""><i class="fas fa-times"></i></span>
 </div>
 
-<script type="text/javascript" src="/js/lunr.min.js?1606311855"></script>
-<script type="text/javascript" src="/js/auto-complete.js?1606311855"></script>
+<script type="text/javascript" src="/js/lunr.min.js?1606320765"></script>
+<script type="text/javascript" src="/js/auto-complete.js?1606320765"></script>
 <script type="text/javascript">
     
         var baseurl = "https:\/\/alexdess.cloud";
     
 </script>
-<script type="text/javascript" src="/js/search.js?1606311855"></script>
+<script type="text/javascript" src="/js/search.js?1606320765"></script>
 
     
   </div>
@@ -381,15 +381,15 @@
 <ul>
 <li>Tanzu Kubernetes Grid (Short TKG)</li>
 <li>Tanzu Mission Control</li>
-<li>Contour as a Ingress and to provide L7 Load-Balancing</li>
+<li>Contour as a Ingress controller to provide L7 Load-Balancing</li>
 <li>The Harbor Container Registry</li>
 <li>Prometheus and Grafana for Observability</li>
 <li>Fluent-Bit for logging (best combined with Log-Insight Cloud)</li>
 </ul>
 <p>I encourage you to review the <a href="https://d1fto35gcfffzn.cloudfront.net/tanzu/VMware-Tanzu-Standard-Solution-Brief.pdf">Tanzu Standard Solutions brief</a> to get a holistic overview regarding the offering.</p>
-<p>I am going to focus on Tanzu Mission control and some of it´s capabilities in this Blogpost.</p>
+<p>I am going to focus on <strong>Tanzu Mission Control</strong> and it´s capabilities in this blogpost.</p>
 <h3 id="tanzu-mission-control">Tanzu Mission Control</h3>
-<p>Tanzu Mission Control - short &ldquo;TMC&rdquo; allows to manage all our K8s clusters, regardless where they run and how they are deployed. It is a centralized management platform where you can secure and operate your Kubernetes infrastructure across multiple teams and even Clouds. Customers choosing the Tanzu Standard offering with their VMware-Cloud Deployment are eligible to use Tanzu Mission Control as well.</p>
+<p>Tanzu Mission Control - short &ldquo;TMC&rdquo; allows to manage all our K8s clusters, regardless where they run and how they are deployed. It is a centralized management platform where you can secure and operate your Kubernetes infrastructure across multiple teams and even Clouds. Customers choosing to leverage the &ldquo;Tanzu Standard&rdquo; offering with their VMware Cloud deployment are eligible to use Tanzu Mission Control as well.</p>
 <p>Tanzu Mission control addresses a lot of challenges which most companies face when  running Kubernetes at scale. We´re going to focus on the following in this Blogpost:</p>
 <ul>
 <li>A streamlined Identitiy and Access Management across Clusters in various Clouds</li>
@@ -397,13 +397,13 @@
 <li>Backup of your Applications running in Kubernetes</li>
 </ul>
 <p>Thinking of those challenges Tanzu Mission control supports the infrastructure and the development teams. It provides independence to consume  Infrastructure for development teams via API which is a huge benefit and for sure one of the reasons why the Cloud is that successful.</p>
-<p>Moving from an ticket-driven approach to provide infrastructure to a completely self service approach where infrastructure can be consumed on-demand and via API really empowers development teams to adopt speed, build new CI pipelines rapidly and at the end ship their applications to production faster.</p>
-<p>On the other hand Tanzu Mission Control provides the necessary consistency for operators and SREs to manage, lifecycle and secure the various Kubernetes Clusters. API driven sounds great but usually it get´s really challenging when dealing with various Cloud Providers. VMware Cloud and TMC ensures a consistent operator experience. Further Operators can attach upstream conformant Kubernetes Clusters from any Cloud-Service provider and leverage the capabilities of TMC to manage those clusters.</p>
+<p>Moving from an ticket-driven approach to provide infrastructure to a completely self service approach where infrastructure can be consumed on-demand and via API really empowers development teams to increase the speed to build and ship their applications.</p>
+<p>On the other hand Tanzu Mission Control provides the necessary consistency for operators and SREs to manage, lifecycle and secure the various Kubernetes Clusters. API driven sounds great but usually it get´s really challenging when dealing with various Cloud Providers. VMware Cloud and TMC ensures a consistent operator experience. Operators can attach upstream conformant Kubernetes Clusters from any Cloud Provider and leverage the capabilities of TMC to manage and secure those clusters.</p>
 <p>In this Blogpost we will use a TKG Cluster, integrate it with Tanzu Mission control and we´re going to make use of the Identity and Access Management as well as the compliance policy enigne of Tanzu Mission Control.</p>
 <h4 id="attaching-our-cluster">Attaching our Cluster</h4>
 <p>As a first step we need to attach our created Kubernetes Cluster to TMC. Note that in a later version it will be possible to even create the TKG Kubernetes Cluster running on VMC from Tanzu Mission Control. For the time being we <strong>created the cluster &ldquo;tkg-wl-03&rdquo; with the tkg-cli</strong> and we are going to attach it to Tanzu Mission Control.</p>
 <p>Let´s talk quickly about the concepts of handling resources in Tanzu Mission Control. The construct of Cluster Groups helps you to group your Kubernetes Clusters. Each Cluster you attach or create belongs to a cluster group.</p>
-<p>Workspaces allow you to group namespaces of different clusters and assign them to logical groups. A example would be to align them with environments or projects. You can add existing namespaces to a workspace or create a new one.</p>
+<p>Workspaces allow you to group Namespaces of different clusters and assign them to logical groups. A example would be to align them with environments or projects. You can add existing Namespaces to a workspace or create a new one.</p>
 
 <div class="mermaid" align="center">
 graph TD;
@@ -427,7 +427,7 @@ secret/tmc-access-secret created
 ....
 </code></pre></div><p>We can verify in the UI the Cluster has been successfully attached and a connection is established.</p>
 <h4 id="create-a-new-namespace-for-our-prod-app"><strong>Create a new Namespace for our prod-app</strong></h4>
-<p>Now that we´ve attached the Cluster successfully to Tanzu Mission Control we can make use of TMC to manage the Cluster. Next we´re going to create a namespace called &ldquo;prod-app&rdquo; which is intended for the deployment of our application.
+<p>Now that we´ve attached the Cluster successfully to Tanzu Mission Control we can make use of TMC to manage the Cluster. Next we´re going to create a Namespace called &ldquo;prod-app&rdquo; which is intended for the deployment of our application.
 <img src="../tmconvmc/images/new-namespace.png?classes=shadow&amp;height=30pc" alt=""></p>
 <p><strong>Give Access to our Developers</strong></p>
 <p>We´ve successfully attached our prod-cluster and created a new namespace. Next we´re going to create an access policy which will allow our developers to access the namespace but deny them to change the policies applied to it.</p>
@@ -486,9 +486,10 @@ No resources found in prod-app namespace.
 </code></pre></div><p>We see that NO pods have been created due to the image policy and we´re getting a clear error -<strong>&ldquo;failed to match image policies:&rdquo;.</strong></p>
 <p>We verified that our policy we applied on the Workspace is working and forbids the container image pull from the public container registry. We can verify this in the TMC UI as well:</p>
 <p><img src="../tmconvmc/images/pull-deny.png?classes=shadow&amp;height=25pc" alt=""></p>
+<p>If and what image policy you´re going to use is up to you. It defenetely makes sense to leverage this functionality for example for production workloads in order to ensure only secure, scanned images are deployed.</p>
 <h2 id="backup-application-data-from-your-k8s-clusters">Backup Application data from your K8s Clusters</h2>
 <p>An important, often underestimated topic is the backup of your data which is stored on your K8s Clusters.  Most of us having for sure heard the phrase &quot; containers are stateless by default&quot;. There are indeed stateless applications. A web search engine like the big G** for example where you type your question and hit enter. When you´re interrupted at any time or close the window accidentally you just start over. It´s one request and you´re getting one answer.</p>
-<p>Your Mail Application, Online-Banking or our Tito App are stateful applications. Requests are handled in the context of previous transactions  and state needs to be persisted. The majority of applications today are stateful applications. Kubernetes provides persistent Storage to applications via Persistent Volume Claims - short PVC. Our Tito-Application for example stores it´s requests in a mysql database which is backed by a Persistent Volume leveraging our vSAN Datastore in VMC:</p>
+<p>Your Mail Application, Online Banking or our Tito App are stateful applications. Requests are handled in the context of previous transactions  and state needs to be persisted. The majority of applications today are stateful applications. Kubernetes provides persistent Storage to applications via Persistent Volume Claims - short PVC. Our Tito Application for example stores it´s requests in a MySQL database which is backed by a Persistent Volume leveraging our vSAN Datastore in VMC:</p>
 <p><strong>Let´s show this persistent volume in K8s and vSphere:</strong></p>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-yaml" data-lang="yaml"><span style="color:#ae81ff">$ kubectl get pvc -A</span>
 <span style="color:#ae81ff">NAMESPACE   NAME             STATUS   VOLUME                                    </span>
@@ -715,19 +716,19 @@ No resources found in prod-app namespace.
     <div style="left: -1000px; overflow: scroll; position: absolute; top: -1000px; border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;">
       <div style="border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;"></div>
     </div>
-    <script src="/js/clipboard.min.js?1606311855"></script>
-    <script src="/js/perfect-scrollbar.min.js?1606311855"></script>
-    <script src="/js/perfect-scrollbar.jquery.min.js?1606311855"></script>
-    <script src="/js/jquery.sticky.js?1606311855"></script>
-    <script src="/js/featherlight.min.js?1606311855"></script>
-    <script src="/js/highlight.pack.js?1606311855"></script>
+    <script src="/js/clipboard.min.js?1606320765"></script>
+    <script src="/js/perfect-scrollbar.min.js?1606320765"></script>
+    <script src="/js/perfect-scrollbar.jquery.min.js?1606320765"></script>
+    <script src="/js/jquery.sticky.js?1606320765"></script>
+    <script src="/js/featherlight.min.js?1606320765"></script>
+    <script src="/js/highlight.pack.js?1606320765"></script>
     <script>hljs.initHighlightingOnLoad();</script>
-    <script src="/js/modernizr.custom-3.6.0.js?1606311855"></script>
-    <script src="/js/learn.js?1606311855"></script>
-    <script src="/js/hugo-learn.js?1606311855"></script>
+    <script src="/js/modernizr.custom-3.6.0.js?1606320765"></script>
+    <script src="/js/learn.js?1606320765"></script>
+    <script src="/js/hugo-learn.js?1606320765"></script>
     
         
-            <script src="/mermaid/mermaid.js?1606311855"></script>
+            <script src="/mermaid/mermaid.js?1606320765"></script>
         
         <script>
             mermaid.initialize({ startOnLoad: true });
