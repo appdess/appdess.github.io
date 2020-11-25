@@ -8,11 +8,6 @@
   </url>
   
   <url>
-    <loc>https://alexdess.cloud/posts/tmconvmc/</loc>
-    <lastmod>2020-11-25T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
     <loc>https://alexdess.cloud/posts/prometheus/</loc>
     <lastmod>2020-08-26T00:00:00+00:00</lastmod>
   </url>
@@ -39,31 +34,26 @@
   
   <url>
     <loc>https://alexdess.cloud/tags/k8s/</loc>
-    <lastmod>2020-11-25T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://alexdess.cloud/posts/</loc>
-    <lastmod>2020-11-25T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://alexdess.cloud/tags/</loc>
-    <lastmod>2020-11-25T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://alexdess.cloud/tags/tmc/</loc>
-    <lastmod>2020-11-25T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://alexdess.cloud/tags/vmc/</loc>
-    <lastmod>2020-11-25T00:00:00+00:00</lastmod>
+    <lastmod>2020-08-26T00:00:00+00:00</lastmod>
   </url>
   
   <url>
     <loc>https://alexdess.cloud/tags/monitoring/</loc>
+    <lastmod>2020-08-26T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://alexdess.cloud/posts/</loc>
+    <lastmod>2020-08-26T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://alexdess.cloud/tags/</loc>
+    <lastmod>2020-08-26T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://alexdess.cloud/tags/vmc/</loc>
     <lastmod>2020-08-26T00:00:00+00:00</lastmod>
   </url>
   
