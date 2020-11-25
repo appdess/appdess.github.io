@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>TMC on alexdess.cloud</title>
+    <link>https://alexdess.cloud/tags/tmc/</link>
+    <description>Recent content in TMC on alexdess.cloud</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Wed, 25 Nov 2020 00:00:00 +0000</lastBuildDate><atom:link href="https://alexdess.cloud/tags/tmc/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>TMC for VMC</title>
+      <link>https://alexdess.cloud/posts/tmconvmc/</link>
+      <pubDate>Wed, 25 Nov 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://alexdess.cloud/posts/tmconvmc/</guid>
+      <description>Secure and backup your Kubernetes Clusters The VMware Tanzu portfolio is a set of products which has the goal to modernize your infrastructure and applications in order to deliver better software to production. Fast, secure and continuously. In my previous Blogposts I focussed on &amp;ldquo;TKG+&amp;rdquo; which was now transformed to the &amp;ldquo;Tanzu Standard&amp;rdquo; offering.
+It includes:
+ Tanzu Kubernetes Grid (Short TKG) Tanzu Mission Control Contour as a Ingress and to provide L7 Load-Balancing The Harbor Container Registry Prometheus and Grafana for Observability Fluent-Bit for logging (best combined with Log-Insight Cloud)  I encourage you to review the Tanzu Standard Solutions brief to get a holistic overview regarding the offering.</description>
+    </item>
+    
+  </channel>
+</rss>

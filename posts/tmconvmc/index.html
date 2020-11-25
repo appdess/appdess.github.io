@@ -1,0 +1,750 @@
+<!DOCTYPE html>
+<html lang="en" class="js csstransforms3d">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="generator" content="Hugo 0.78.2" />
+    <meta name="description" content="Yet another Blog">
+<meta name="author" content="Alexander Dess">
+
+    <link rel="shortcut icon" href="/images/favicon.png" type="image/x-icon" />
+
+    <title>TMC for VMC - alexdess.cloud</title>
+
+    
+    <link href="/css/nucleus.css?1606311284" rel="stylesheet">
+    <link href="/css/fontawesome-all.min.css?1606311284" rel="stylesheet">
+    <link href="/css/hybrid.css?1606311284" rel="stylesheet">
+    <link href="/css/featherlight.min.css?1606311284" rel="stylesheet">
+    <link href="/css/perfect-scrollbar.min.css?1606311284" rel="stylesheet">
+    <link href="/css/auto-complete.css?1606311284" rel="stylesheet">
+    <link href="/css/atom-one-dark-reasonable.css?1606311284" rel="stylesheet">
+    <link href="/css/theme.css?1606311284" rel="stylesheet">
+    <link href="/css/hugo-theme.css?1606311284" rel="stylesheet">
+    
+    <link href="/css/theme-blue.css?1606311284" rel="stylesheet">
+    
+    <link href="/css/foo.css?1606311284" rel="stylesheet"><link href="/css/bar.css?1606311284" rel="stylesheet">
+
+    <script src="/js/jquery-3.3.1.min.js?1606311284"></script>
+
+    <style>
+      :root #header + #content > #left > #rlblock_left{
+          display:none !important;
+      }
+      
+    </style>
+    
+  </head>
+  <body class="" data-url="/posts/tmconvmc/">
+    <nav id="sidebar" class="">
+
+
+
+  <div id="header-wrapper">
+    <div id="header">
+      <a id="logo" href="https://alexdess.cloud/">
+    <img src="/images/favicon.png">
+  </a>
+    </div>
+    
+        <div class="searchbox">
+    <label for="search-by"><i class="fas fa-search"></i></label>
+    <input data-search-input id="search-by" type="search" placeholder="Search...">
+    <span data-search-clear=""><i class="fas fa-times"></i></span>
+</div>
+
+<script type="text/javascript" src="/js/lunr.min.js?1606311284"></script>
+<script type="text/javascript" src="/js/auto-complete.js?1606311284"></script>
+<script type="text/javascript">
+    
+        var baseurl = "https:\/\/alexdess.cloud";
+    
+</script>
+<script type="text/javascript" src="/js/search.js?1606311284"></script>
+
+    
+  </div>
+  
+
+    <div class="highlightable">
+    <ul class="topics">
+
+        
+          
+          
+
+
+
+
+ 
+  
+    
+    <li data-nav-id="/posts/" title="Posts" class="dd-item
+        parent
+        
+        
+        ">
+      <a href="/posts/">
+          Posts
+          
+      </a>
+      
+      
+        <ul>
+          
+          
+            
+          
+          
+
+        
+          
+            
+            
+
+
+
+
+ 
+  
+    
+    <li data-nav-id="/posts/prometheus/" title="Prometheus - From Metrics to Insights" class="dd-item
+        
+        
+        
+        ">
+      <a href="/posts/prometheus/">
+          Prometheus - From Metrics to Insights
+          
+      </a>
+      
+      
+    </li>
+  
+ 
+
+            
+          
+            
+            
+
+
+
+
+ 
+  
+    
+    <li data-nav-id="/posts/tkgvmc/" title="TKG on VMC" class="dd-item
+        
+        
+        
+        ">
+      <a href="/posts/tkgvmc/">
+          TKG on VMC
+          
+      </a>
+      
+      
+    </li>
+  
+ 
+
+            
+          
+            
+            
+
+
+
+
+ 
+  
+    
+    <li data-nav-id="/posts/tmconvmc/" title="TMC for VMC" class="dd-item
+        parent
+        active
+        
+        ">
+      <a href="/posts/tmconvmc/">
+          TMC for VMC
+          
+      </a>
+      
+      
+    </li>
+  
+ 
+
+            
+          
+            
+            
+
+
+
+
+ 
+  
+    
+    <li data-nav-id="/posts/appmodernization/" title="App modernization with VMC" class="dd-item
+        
+        
+        
+        ">
+      <a href="/posts/appmodernization/">
+          App modernization with VMC
+          
+      </a>
+      
+      
+    </li>
+  
+ 
+
+            
+          
+            
+            
+
+
+
+
+ 
+  
+    
+    <li data-nav-id="/posts/clusterapivmc/" title="K8s ClusterAPI" class="dd-item
+        
+        
+        
+        ">
+      <a href="/posts/clusterapivmc/">
+          K8s ClusterAPI
+          
+      </a>
+      
+      
+    </li>
+  
+ 
+
+            
+          
+            
+            
+
+
+
+
+ 
+  
+    
+    <li data-nav-id="/posts/govc/" title="GOVC" class="dd-item
+        
+        
+        
+        ">
+      <a href="/posts/govc/">
+          GOVC
+          
+      </a>
+      
+      
+    </li>
+  
+ 
+
+            
+          
+        
+        </ul>
+      
+    </li>
+  
+ 
+
+          
+        
+    </ul>
+
+    
+    
+      <section id="shortcuts">
+        <h3>More</h3>
+        <ul>
+          
+              <li>
+                  <a class="padding" href="https://twitter.com/dessCloud"><i class='fab fa-fw fa-twitter'></i> Twitter</a>
+              </li>
+          
+              <li>
+                  <a class="padding" href="https://www.linkedin.com/in/alexander-dess-00101010/"><i class='fab fa-fw fa-linkedin'></i> Linkedin</a>
+              </li>
+          
+              <li>
+                  <a class="padding" href="https://github.com/appdess"><i class='fab fa-fw fa-github'></i> GitHub</a>
+              </li>
+          
+              <li>
+                  <a class="padding" href="https://alexdess.cloud/tags"><i class='fas fa-tags'></i> Tags</a>
+              </li>
+          
+        </ul>
+      </section>
+    
+
+    
+    <section id="footer">
+      Built with <i class="fas fa-heart"></i>
+
+    </section>
+  </div>
+</nav>
+
+
+
+
+        <section id="body">
+        <div id="overlay"></div>
+        <div class="padding highlightable">
+              
+              <div>
+                <div id="top-bar">
+                
+                
+                <div id="breadcrumbs" itemscope="" itemtype="http://data-vocabulary.org/Breadcrumb">
+                    <span id="sidebar-toggle-span">
+                        <a href="#" id="sidebar-toggle" data-sidebar-toggle="">
+                          <i class="fas fa-bars"></i>
+                        </a>
+                    </span>
+                  
+                  <span id="toc-menu"><i class="fas fa-list-alt"></i></span>
+                  
+                  <span class="links">
+                 
+                 
+                   TMC for VMC
+                 
+                  </span>
+                </div>
+                
+                    <div class="progress">
+    <div class="wrapper">
+<nav id="TableOfContents">
+  <ul>
+    <li><a href="#secure-and-backup-your-kubernetes-clusters">Secure and backup your Kubernetes Clusters</a>
+      <ul>
+        <li><a href="#tanzu-mission-control">Tanzu Mission Control</a></li>
+        <li><a href="#harbor-container-registry-policy">Harbor Container Registry Policy</a></li>
+      </ul>
+    </li>
+    <li><a href="#backup-application-data-from-your-k8s-clusters">Backup Application data from your K8s Clusters</a></li>
+  </ul>
+</nav>
+    </div>
+</div>
+
+                
+              </div>
+            </div>
+            
+        <div id="head-tags">
+        
+<div class="tags">
+
+  <a class="tag-link" href="/tags/k8s">K8s</a>
+
+  <a class="tag-link" href="/tags/vmc">VMC</a>
+
+  <a class="tag-link" href="/tags/tmc">TMC</a>
+
+</div>
+
+        </div>
+        
+        <div id="body-inner">
+          
+            <h1>
+              
+              TMC for VMC
+            </h1>
+          
+
+        
+
+
+
+	<h2 id="secure-and-backup-your-kubernetes-clusters">Secure and backup your Kubernetes Clusters</h2>
+<p>The VMware Tanzu portfolio is a set of products which has the goal to modernize your infrastructure and applications in order to deliver better software to production. Fast, secure and continuously. In my previous Blogposts I focussed on &ldquo;TKG+&rdquo; which was now transformed to the &ldquo;Tanzu Standard&rdquo; offering.</p>
+<p><strong>It includes:</strong></p>
+<ul>
+<li>Tanzu Kubernetes Grid (Short TKG)</li>
+<li>Tanzu Mission Control</li>
+<li>Contour as a Ingress and to provide L7 Load-Balancing</li>
+<li>The Harbor Container Registry</li>
+<li>Prometheus and Grafana for Observability</li>
+<li>Fluent-Bit for logging (best combined with Log-Insight Cloud)</li>
+</ul>
+<p>I encourage you to review the <a href="https://d1fto35gcfffzn.cloudfront.net/tanzu/VMware-Tanzu-Standard-Solution-Brief.pdf">Tanzu Standard Solutions brief</a> to get a holistic overview regarding the offering.</p>
+<p>I am going to focus on Tanzu Mission control and some of it´s capabilities in this Blogpost.</p>
+<h3 id="tanzu-mission-control">Tanzu Mission Control</h3>
+<p>Tanzu Mission Control - short &ldquo;TMC&rdquo; allows to manage all our K8s clusters, regardless where they run and how they are deployed. It is a centralized management platform where you can secure and operate your Kubernetes infrastructure across multiple teams and even Clouds. Customers choosing the Tanzu Standard offering with their VMware-Cloud Deployment are eligible to use Tanzu Mission Control as well.</p>
+<p>Tanzu Mission control addresses a lot of challenges which most companies face when  running Kubernetes at scale. We´re going to focus on the following in this Blogpost:</p>
+<ul>
+<li>A streamlined Identitiy and Access Management across Clusters in various Clouds</li>
+<li>Enforcing Compliance and Security Policies</li>
+<li>Backup of your Applications running in Kubernetes</li>
+</ul>
+<p>Thinking of those challenges Tanzu Mission control supports the infrastructure and the development teams. It provides independence to consume  Infrastructure for development teams via API which is a huge benefit and for sure one of the reasons why the Cloud is that successful.</p>
+<p>Moving from an ticket-driven approach to provide infrastructure to a completely self service approach where infrastructure can be consumed on-demand and via API really empowers development teams to adopt speed, build new CI pipelines rapidly and at the end ship their applications to production faster.</p>
+<p>On the other hand Tanzu Mission Control provides the necessary consistency for operators and SREs to manage, lifecycle and secure the various Kubernetes Clusters. API driven sounds great but usually it get´s really challenging when dealing with various Cloud Providers. VMware Cloud and TMC ensures a consistent operator experience. Further Operators can attach upstream conformant Kubernetes Clusters from any Cloud-Service provider and leverage the capabilities of TMC to manage those clusters.</p>
+<p>In this Blogpost we will use a TKG Cluster, integrate it with Tanzu Mission control and we´re going to make use of the Identity and Access Management as well as the compliance policy enigne of Tanzu Mission Control.</p>
+<h4 id="attaching-our-cluster">Attaching our Cluster</h4>
+<p>As a first step we need to attach our created Kubernetes Cluster to TMC. Note that in a later version it will be possible to even create the TKG Kubernetes Cluster running on VMC from Tanzu Mission Control. For the time being we <strong>created the cluster &ldquo;tkg-wl-03&rdquo; with the tkg-cli</strong> and we are going to attach it to Tanzu Mission Control.</p>
+<p>Let´s talk quickly about the concepts of handling resources in Tanzu Mission Control. The construct of Cluster Groups helps you to group your Kubernetes Clusters. Each Cluster you attach or create belongs to a cluster group.</p>
+<p>Workspaces allow you to group namespaces of different clusters and assign them to logical groups. A example would be to align them with environments or projects. You can add existing namespaces to a workspace or create a new one.</p>
+
+<div class="mermaid" align="center">
+graph TD;
+C(VMware-Cloud-Org)
+C --> D[Cluster Group]
+C --> E[Workspace]
+D --> |contains| F[k8s-Cluster-1]
+E --> |Namespace| F[k8s-Cluster-1]
+E --> |Namespace| G[k8s-Cluster-2]
+D --> |contains| G[k8s-Cluster-2]
+</div>
+
+<p>I have created the Cluster-Group &ldquo;prod&rdquo; and a Workspace called &ldquo;prod&rdquo; which is the intended location for our production K8s Clusters.</p>
+<p>Let´s attach our Cluster to TMC:
+<img src="../tmconvmc/images/attach.png?classes=shadow&amp;width=30pc" alt=""></p>
+<p>All we need to do is to run the single-line installer we got presented from the UI. Let´s <strong>run the TMC-Installer to attach our TKG Cluster:</strong></p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">kubectl create -f <span style="color:#e6db74">&#34;https://vmcsetemea.tmc.cloud.vmware.com/installer?id=XXXXX=attach&#34;</span>
+namespace/vmware-system-tmc created
+configmap/stack-config created
+secret/tmc-access-secret created
+....
+</code></pre></div><p>We can verify in the UI the Cluster has been successfully attached and a connection is established.</p>
+<h4 id="create-a-new-namespace-for-our-prod-app"><strong>Create a new Namespace for our prod-app</strong></h4>
+<p>Now that we´ve attached the Cluster successfully to Tanzu Mission Control we can make use of TMC to manage the Cluster. Next we´re going to create a namespace called &ldquo;prod-app&rdquo; which is intended for the deployment of our application.
+<img src="../tmconvmc/images/new-namespace.png?classes=shadow&amp;height=30pc" alt=""></p>
+<p><strong>Give Access to our Developers</strong></p>
+<p>We´ve successfully attached our prod-cluster and created a new namespace. Next we´re going to create an access policy which will allow our developers to access the namespace but deny them to change the policies applied to it.</p>
+<p>The setting will be applied to all namespaces attached to the Workspace &ldquo;prod&rdquo;. We want them to be able to work with all privileges while ensuring that the policies we´ve set are enforced. Therefore we assign the right &ldquo;cluster.edit&rdquo; which gives admin privileges without allowing to change the policies which we will set later on.
+<img src="../tmconvmc/images/dev-access.png?classes=shadow&amp;height=25pc" alt=""></p>
+<h3 id="harbor-container-registry-policy">Harbor Container Registry Policy</h3>
+<p>We want that only verified Images, stored in our private harbor container registry can be deployed on our production Workspace. Therefore we can leverage the tab &ldquo;Image registry&rdquo; to create such a policy.</p>
+<p><img src="../tmconvmc/images/pull-policy.png?classes=shadow&amp;height=25pc" alt=""></p>
+<p>You can add multiple registry patterns if you wish. I am going to allow all registries located in my domain &ldquo;*cemea.vmc&rdquo;. My private Harbor registry FQDN is &ldquo;harbor.cemea.vmc&rdquo;.</p>
+<p>Let´s create a simple deployment to verify if our private registry is working and if the policy is enforced.</p>
+<p><strong>We will create the following simple deployment:</strong></p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-yaml" data-lang="yaml"><span style="color:#ae81ff">$ cat deploy-from-private-registry.yaml </span>
+<span style="color:#f92672">apiVersion</span>: <span style="color:#ae81ff">apps/v1</span>
+<span style="color:#f92672">kind</span>: <span style="color:#ae81ff">Deployment</span>
+...<span style="color:#ae81ff">...</span>
+...<span style="color:#ae81ff">...</span>
+    <span style="color:#f92672">spec</span>:
+      <span style="color:#f92672">containers</span>:
+      - <span style="color:#f92672">name</span>: <span style="color:#ae81ff">tito</span>
+        <span style="color:#f92672">image</span>: <span style="color:#ae81ff">harbor.cemea.vmc/library/tito-fe:v1</span>
+        <span style="color:#f92672">ports</span>:
+        - <span style="color:#f92672">containerPort</span>: <span style="color:#ae81ff">80</span>
+</code></pre></div><p><strong>Apply the deployment to our Cluster:</strong></p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">$ kubectl apply -f deploy-from-private-registry.yaml 
+</code></pre></div><p><strong>Verify if our pods are running:</strong></p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">$ k get po -n prod-app
+NAME                       READY   STATUS    RESTARTS   AGE
+tito-fe-67b8dfb75d-gpnpt   1/1     Running   <span style="color:#ae81ff">0</span>          14s
+tito-fe-67b8dfb75d-q72bg   1/1     Running   <span style="color:#ae81ff">0</span>          14s
+tito-fe-67b8dfb75d-qc4gp   1/1     Running   <span style="color:#ae81ff">0</span>          14s
+</code></pre></div><p>Woohooo - our private container registry is working properly and the container images have been pulled from it.
+<!-- raw HTML omitted --><!-- raw HTML omitted --></p>
+<h4 id="the-image-pull-policy">The Image Pull Policy</h4>
+<p>Next step is to verify if our Image policy is working correctly and if we are denied to deploy an application hosted on a public registry - for example the docker hub.</p>
+<p>I have modified the deployment file to point to the same image stored on docker-hub:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-yaml" data-lang="yaml"><span style="color:#ae81ff">$ cat deploy-docker-hub.yaml </span>
+<span style="color:#f92672">apiVersion</span>: <span style="color:#ae81ff">apps/v1</span>
+<span style="color:#f92672">kind</span>: <span style="color:#ae81ff">Deployment</span>
+...<span style="color:#ae81ff">...</span>
+...<span style="color:#ae81ff">...</span>
+    <span style="color:#f92672">spec</span>:
+      <span style="color:#f92672">containers</span>:
+      - <span style="color:#f92672">name</span>: <span style="color:#ae81ff">tito</span>
+        <span style="color:#f92672">image</span>: <span style="color:#ae81ff">adess/vmc-demo-k8s</span>
+        <span style="color:#f92672">ports</span>:
+        - <span style="color:#f92672">containerPort</span>: <span style="color:#ae81ff">80</span>
+</code></pre></div><p><strong>Let´s apply this deployment:</strong></p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">$ kubectl apply -f deploy-docker-hub.yaml
+deployment.apps/tito-fe created
+</code></pre></div><p><strong>Hmmm - seems our deployment was created but let´s inspect what happens in the backround:</strong></p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">$ kubectl get po -n prod-app
+No resources found in prod-app namespace.
+</code></pre></div><p>**Let´s inspect our deployment to understand what´s happening:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">k describe replicaset -n prod-app
+...<span style="color:#e6db74">&#34;validation.policies.tmc.cloud.vmware.com&#34;</span> denied the request: **failed to match image policies:** spec.containers<span style="color:#f92672">[</span>0<span style="color:#f92672">]</span>.image: Forbidden: no matching image policy
+</code></pre></div><p>We see that NO pods have been created due to the image policy and we´re getting a clear error -<strong>&ldquo;failed to match image policies:&rdquo;.</strong></p>
+<p>We verified that our policy we applied on the Workspace is working and forbids the container image pull from the public container registry. We can verify this in the TMC UI as well:</p>
+<p><img src="../tmconvmc/images/pull-deny.png?classes=shadow&amp;height=25pc" alt=""></p>
+<h2 id="backup-application-data-from-your-k8s-clusters">Backup Application data from your K8s Clusters</h2>
+<p>An important, often underestimated topic is the backup of your data which is stored on your K8s Clusters.  Most of us having for sure heard the phrase &quot; containers are stateless by default&quot;. There are indeed stateless applications. A web search engine like the big G** for example where you type your question and hit enter. When you´re interrupted at any time or close the window accidentally you just start over. It´s one request and you´re getting one answer.</p>
+<p>Your Mail Application, Online-Banking or our Tito App are stateful applications. Requests are handled in the context of previous transactions  and state needs to be persisted. The majority of applications today are stateful applications. Kubernetes provides persistent Storage to applications via Persistent Volume Claims - short PVC. Our Tito-Application for example stores it´s requests in a mysql database which is backed by a Persistent Volume leveraging our vSAN Datastore in VMC:</p>
+<p><strong>Let´s show this persistent volume in K8s and vSphere:</strong></p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-yaml" data-lang="yaml"><span style="color:#ae81ff">$ kubectl get pvc -A</span>
+<span style="color:#ae81ff">NAMESPACE   NAME             STATUS   VOLUME                                    </span>
+<span style="color:#ae81ff">prod-app    mysql-pv-claim   Bound    pvc-7cd79711-59ad-49d2-8e9d-e4c8ceb6fc6f</span>
+
+<span style="color:#ae81ff">$ kubectl describe pvc -A | grep -i labels  </span>
+<span style="color:#f92672">Labels</span>:        <span style="color:#ae81ff">app=tito</span>
+</code></pre></div><p>We´ve applied a label to the Persisten Volume Claim and therefore we can easily find it in the vSphere UI. It´s using the &ldquo;vSAN default Storage Class&rdquo; as defined in the K8s Storage Class. The great thing here is that you can leverage vSAN Storage policies by creating them in the vSphere UI and using them directly from your K8s Clusters. Therefore you could have a development storage policy with no redundancy to save space and a production policy which ensures the site replication of your data.</p>
+<p>In addition we can easily identify our Persistent Volumes created in K8s by their applied labels:</p>
+<p><img src="../tmconvmc/images/ds-pvc-label.png?classes=shadow&amp;height=20pc" alt=""></p>
+<p>Our app has a &ldquo;db-dump&rdquo; function included which will show you the current database entries. Currently our Database has this entries:</p>
+<p><img src="../tmconvmc/images/db.png?classes=shadow&amp;height=10pc" alt=""></p>
+<p>Next we´re going to backup our Namespace leveraging Tanzu Mission Control and a S3-Bucket which is located in our connected VPC.</p>
+<p>In the &ldquo;Aministration&rdquo; tab of Tanzu Mission Control you need to create the Data Protection Credentials which will be used by Tanzu Mission control and Velero to backup your data to the corresponding S3 bucket.</p>
+<p><strong>Let´s create a Data Protection Credential in Tanzu Mission Control</strong></p>
+<p>Download and execute the Cloud-Formation Template in your AWS account. - That´s it simple, fast, failproof and straight forward!</p>
+<p><img src="../tmconvmc/images/credentials.png?classes=shadow&amp;height=30pc" alt=""></p>
+<p>Next step is to activate the &ldquo;Data Protection&rdquo; feature for our paticular Cluster which we want to protect. You can do this by navigating back to &ldquo;Clusters&rdquo; and &ldquo;Data Protection&rdquo;.</p>
+<p><img src="../tmconvmc/images/activate-dp.png?classes=shadow&amp;height=10pc" alt=""></p>
+<p>When we activate the Data Protection Tanzu Mission Control creates a seperate Namespace for Velero which is the Backup tool we´re using in the backend to do the actual backups to our S3 Bucket. The deployment and configuration happens  automatically. All you will notice is a new namespace with velero pods running on your cluster:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-yaml" data-lang="yaml"><span style="color:#ae81ff">$ k get po -n velero</span>
+<span style="color:#ae81ff">NAME                      READY   STATUS    RESTARTS   AGE</span>
+<span style="color:#ae81ff">restic-77gm5              1/1     Running   0          37s</span>
+<span style="color:#ae81ff">restic-c6q8t              1/1     Running   0          36s</span>
+<span style="color:#ae81ff">restic-vxwgq              1/1     Running   0          35s</span>
+<span style="color:#ae81ff">velero-5884ddd89f-8br6c   1/1     Running   0          47s</span>
+</code></pre></div><p>Let´s create a backup of our tito prod application from the TMC-UI:</p>
+<p><strong>We select our Cluster where we want to do the backup and the type of the backup &ldquo;eg - selected Namespaces&rdquo;:</strong>
+<img src="../tmconvmc/images/backup1.png?classes=shadow&amp;height=20pc" alt="">
+<strong>Select the Namespace we want to backup. In our case it´s the &ldquo;prod-app&rdquo; Namespace:</strong>
+<img src="../tmconvmc/images/backup2.png?classes=shadow&amp;height=40pc" alt=""></p>
+<p>As you saw above you are able to create a backup for the entire Cluster or select the namespaces which you want to backup.</p>
+<p><strong>Now we´re going to delete our whole namespace on the K8s Cluster containing our application and all the data:</strong></p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-yaml" data-lang="yaml"><span style="color:#ae81ff">k delete ns prod-app</span>
+<span style="color:#ae81ff">namespace &#34;prod-app&#34; deleted</span>
+</code></pre></div><p>All resources have been deleted including our persistent volume which was viewable on the vSAN Datastore before:</p>
+<p><img src="../tmconvmc/images/vsan-del.png?classes=shadow&amp;height=20pc" alt=""></p>
+<p>Let´s try to restore our application on the latest stage by selecting our backup and klick &ldquo;RESTORE&rdquo;.</p>
+<p><img src="../tmconvmc/images/tmc-restore.png?classes=shadow&amp;height=20pc" alt=""></p>
+<p>Immediately Tanzu Mission Control starts the restore process via Velero and the Namespace including all the resources is created again on our Cluster:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-yaml" data-lang="yaml"><span style="color:#ae81ff">$ k get po -n prod-app</span>
+<span style="color:#ae81ff">NAME                      READY   STATUS    RESTARTS   AGE</span>
+<span style="color:#ae81ff">mysql-7fc6d65488-l2n9t    1/1     Running   0          17s</span>
+<span style="color:#ae81ff">titofe-5f457dd8d8-2dlqj   1/1     Running   0          17s</span>
+<span style="color:#ae81ff">titofe-5f457dd8d8-fqfdd   1/1     Running   0          17s</span>
+<span style="color:#ae81ff">titofe-5f457dd8d8-hcsbm   1/1     Running   0          17s</span>
+<span style="color:#ae81ff">titofe-5f457dd8d8-z2mrs   1/1     Running   0          17s</span>
+
+<span style="color:#ae81ff">tkg@lx-tkg004:~/vmworld2020/tito-prod$ k get pvc -n prod-app</span>
+<span style="color:#ae81ff">NAME             STATUS   VOLUME                                     CAPACITY   ACCESS MODES   STORAGECLASS   AGE</span>
+<span style="color:#ae81ff">mysql-pv-claim   Bound    pvc-4e5e10af-ebf0-4a82-b669-a78836fc84e6   20Gi       RWO            default        24s</span>
+</code></pre></div><p>Let´s verify that our volume is visible in the vSphere UI as well. We can see that velero has applied additional labels to the volume:</p>
+<p><img src="../tmconvmc/images/vsan-restore.png?classes=shadow&amp;height=20pc" alt=""></p>
+<p>Last but not least let´s verify the functionality of our application and the entries in the database:</p>
+<p><img src="../tmconvmc/images/db.png?classes=shadow&amp;height=10pc" alt=""></p>
+<p>Wooohoooo! We´re seeing that we successfully restored our K8s application leveraging Tanzu Mission control from a S3-Bucket located in the connected VPC of our VMConAWS SDDC. This post already got longer than intended but it is still only scratching the surface of what´s possible when combining TMC and VMware Cloud.</p>
+<p>In a Multi-Cloud reality security and governance is becoming more important than ever before. Tanzu Mission Control helps to simplify provisioning, lifecycle and to apply security and governance policies to your K8s Clusters - no matter if they already exist On Prem or in any Cloud.</p>
+
+
+
+
+
+<footer class=" footline" >
+	
+</footer>
+
+        
+        </div>
+        
+
+      </div>
+
+    <div id="navigation">
+        
+        
+
+        
+            
+            
+                
+                    
+                    
+                
+                
+
+                    
+                    
+                        
+                    
+                    
+
+                    
+                        
+            
+            
+                
+                    
+                    
+                
+                
+
+                    
+                    
+                        
+                    
+                    
+
+                    
+                        
+            
+            
+                
+                    
+                        
+                        
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                        
+                        
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+            
+        
+                    
+            
+        
+
+        
+
+
+	 
+	 
+    </div>
+
+    </section>
+
+    <div style="left: -1000px; overflow: scroll; position: absolute; top: -1000px; border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;">
+      <div style="border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;"></div>
+    </div>
+    <script src="/js/clipboard.min.js?1606311284"></script>
+    <script src="/js/perfect-scrollbar.min.js?1606311284"></script>
+    <script src="/js/perfect-scrollbar.jquery.min.js?1606311284"></script>
+    <script src="/js/jquery.sticky.js?1606311284"></script>
+    <script src="/js/featherlight.min.js?1606311284"></script>
+    <script src="/js/highlight.pack.js?1606311284"></script>
+    <script>hljs.initHighlightingOnLoad();</script>
+    <script src="/js/modernizr.custom-3.6.0.js?1606311284"></script>
+    <script src="/js/learn.js?1606311284"></script>
+    <script src="/js/hugo-learn.js?1606311284"></script>
+    
+        
+            <script src="/mermaid/mermaid.js?1606311284"></script>
+        
+        <script>
+            mermaid.initialize({ startOnLoad: true });
+        </script>
+    
+    <script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-146538348-1', 'auto');
+  ga('send', 'pageview');
+
+</script>
+  </body>
+</html>

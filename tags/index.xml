@@ -6,13 +6,31 @@
     <description>Recent content in Tags on alexdess.cloud</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Wed, 26 Aug 2020 00:00:00 +0000</lastBuildDate><atom:link href="https://alexdess.cloud/tags/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Wed, 25 Nov 2020 00:00:00 +0000</lastBuildDate><atom:link href="https://alexdess.cloud/tags/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>K8s</title>
       <link>https://alexdess.cloud/tags/k8s/</link>
-      <pubDate>Wed, 26 Aug 2020 00:00:00 +0000</pubDate>
+      <pubDate>Wed, 25 Nov 2020 00:00:00 +0000</pubDate>
       
       <guid>https://alexdess.cloud/tags/k8s/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>TMC</title>
+      <link>https://alexdess.cloud/tags/tmc/</link>
+      <pubDate>Wed, 25 Nov 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://alexdess.cloud/tags/tmc/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>VMC</title>
+      <link>https://alexdess.cloud/tags/vmc/</link>
+      <pubDate>Wed, 25 Nov 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://alexdess.cloud/tags/vmc/</guid>
       <description></description>
     </item>
     
@@ -22,15 +40,6 @@
       <pubDate>Wed, 26 Aug 2020 00:00:00 +0000</pubDate>
       
       <guid>https://alexdess.cloud/tags/monitoring/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>VMC</title>
-      <link>https://alexdess.cloud/tags/vmc/</link>
-      <pubDate>Wed, 26 Aug 2020 00:00:00 +0000</pubDate>
-      
-      <guid>https://alexdess.cloud/tags/vmc/</guid>
       <description></description>
     </item>
     
