@@ -12,21 +12,21 @@
     <title>TMC for VMC - alexdess.cloud</title>
 
     
-    <link href="/css/nucleus.css?1606320765" rel="stylesheet">
-    <link href="/css/fontawesome-all.min.css?1606320765" rel="stylesheet">
-    <link href="/css/hybrid.css?1606320765" rel="stylesheet">
-    <link href="/css/featherlight.min.css?1606320765" rel="stylesheet">
-    <link href="/css/perfect-scrollbar.min.css?1606320765" rel="stylesheet">
-    <link href="/css/auto-complete.css?1606320765" rel="stylesheet">
-    <link href="/css/atom-one-dark-reasonable.css?1606320765" rel="stylesheet">
-    <link href="/css/theme.css?1606320765" rel="stylesheet">
-    <link href="/css/hugo-theme.css?1606320765" rel="stylesheet">
+    <link href="/css/nucleus.css?1606331370" rel="stylesheet">
+    <link href="/css/fontawesome-all.min.css?1606331370" rel="stylesheet">
+    <link href="/css/hybrid.css?1606331370" rel="stylesheet">
+    <link href="/css/featherlight.min.css?1606331370" rel="stylesheet">
+    <link href="/css/perfect-scrollbar.min.css?1606331370" rel="stylesheet">
+    <link href="/css/auto-complete.css?1606331370" rel="stylesheet">
+    <link href="/css/atom-one-dark-reasonable.css?1606331370" rel="stylesheet">
+    <link href="/css/theme.css?1606331370" rel="stylesheet">
+    <link href="/css/hugo-theme.css?1606331370" rel="stylesheet">
     
-    <link href="/css/theme-blue.css?1606320765" rel="stylesheet">
+    <link href="/css/theme-blue.css?1606331370" rel="stylesheet">
     
-    <link href="/css/foo.css?1606320765" rel="stylesheet"><link href="/css/bar.css?1606320765" rel="stylesheet">
+    <link href="/css/foo.css?1606331370" rel="stylesheet"><link href="/css/bar.css?1606331370" rel="stylesheet">
 
-    <script src="/js/jquery-3.3.1.min.js?1606320765"></script>
+    <script src="/js/jquery-3.3.1.min.js?1606331370"></script>
 
     <style>
       :root #header + #content > #left > #rlblock_left{
@@ -54,14 +54,14 @@
     <span data-search-clear=""><i class="fas fa-times"></i></span>
 </div>
 
-<script type="text/javascript" src="/js/lunr.min.js?1606320765"></script>
-<script type="text/javascript" src="/js/auto-complete.js?1606320765"></script>
+<script type="text/javascript" src="/js/lunr.min.js?1606331370"></script>
+<script type="text/javascript" src="/js/auto-complete.js?1606331370"></script>
 <script type="text/javascript">
     
         var baseurl = "https:\/\/alexdess.cloud";
     
 </script>
-<script type="text/javascript" src="/js/search.js?1606320765"></script>
+<script type="text/javascript" src="/js/search.js?1606331370"></script>
 
     
   </div>
@@ -417,7 +417,7 @@ D --> |contains| G[k8s-Cluster-2]
 </div>
 
 <p>I have created the Cluster-Group &ldquo;prod&rdquo; and a Workspace called &ldquo;prod&rdquo; which is the intended location for our production K8s Clusters.</p>
-<p>Let´s attach our Cluster to TMC:
+<p><strong>Let´s attach our existing Cluster to TMC:</strong>
 <img src="../tmconvmc/images/attach.png?classes=shadow&amp;width=30pc" alt=""></p>
 <p>All we need to do is to run the single-line installer we got presented from the UI. Let´s <strong>run the TMC-Installer to attach our TKG Cluster:</strong></p>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">kubectl create -f <span style="color:#e6db74">&#34;https://vmcsetemea.tmc.cloud.vmware.com/installer?id=XXXXX=attach&#34;</span>
@@ -497,12 +497,12 @@ No resources found in prod-app namespace.
 
 <span style="color:#ae81ff">$ kubectl describe pvc -A | grep -i labels  </span>
 <span style="color:#f92672">Labels</span>:        <span style="color:#ae81ff">app=tito</span>
-</code></pre></div><p>We´ve applied a label to the Persisten Volume Claim and therefore we can easily find it in the vSphere UI. It´s using the &ldquo;vSAN default Storage Class&rdquo; as defined in the K8s Storage Class. The great thing here is that you can leverage vSAN Storage policies by creating them in the vSphere UI and using them directly from your K8s Clusters. Therefore you could have a development storage policy with no redundancy to save space and a production policy which ensures the site replication of your data.</p>
-<p>In addition we can easily identify our Persistent Volumes created in K8s by their applied labels:</p>
+</code></pre></div><p>We´ve applied a label to the Persistent Volume Claim and therefore we can easily locate it in the vSphere UI. It´s using the &ldquo;vSAN default Storage Class&rdquo; as defined in the K8s Storage Class. The great thing here is that you can leverage vSAN Storage policies by creating them in the vSphere UI and using them directly from your K8s Clusters. Therefore you could have a development storage policy with no redundancy to save space and a production policy which ensures the site replication of your data.</p>
+<p><strong>Filter the Persistent Volume created in K8s by the label:</strong></p>
 <p><img src="../tmconvmc/images/ds-pvc-label.png?classes=shadow&amp;height=20pc" alt=""></p>
-<p>Our app has a &ldquo;db-dump&rdquo; function included which will show you the current database entries. Currently our Database has this entries:</p>
+<p>Our app which you can try at <a href="http://tito.alexdess.cloud/">http://tito.alexdess.cloud/</a> has a &ldquo;db-dump&rdquo; function included which will show you the current database entries. Currently our database has this entries:</p>
 <p><img src="../tmconvmc/images/db.png?classes=shadow&amp;height=10pc" alt=""></p>
-<p>Next we´re going to backup our Namespace leveraging Tanzu Mission Control and a S3-Bucket which is located in our connected VPC.</p>
+<p>Next we´re going to backup our Namespace leveraging Tanzu Mission Control to a S3-Bucket which is located in our connected VPC.</p>
 <p>In the &ldquo;Aministration&rdquo; tab of Tanzu Mission Control you need to create the Data Protection Credentials which will be used by Tanzu Mission control and Velero to backup your data to the corresponding S3 bucket.</p>
 <p><strong>Let´s create a Data Protection Credential in Tanzu Mission Control</strong></p>
 <p>Download and execute the Cloud-Formation Template in your AWS account. - That´s it simple, fast, failproof and straight forward!</p>
@@ -525,11 +525,11 @@ No resources found in prod-app namespace.
 <p><strong>Now we´re going to delete our whole namespace on the K8s Cluster containing our application and all the data:</strong></p>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-yaml" data-lang="yaml"><span style="color:#ae81ff">k delete ns prod-app</span>
 <span style="color:#ae81ff">namespace &#34;prod-app&#34; deleted</span>
-</code></pre></div><p>All resources have been deleted including our persistent volume which was viewable on the vSAN Datastore before:</p>
+</code></pre></div><p><strong>All resources have been deleted including our persistent volume which was viewable on the vSAN Datastore before:</strong></p>
 <p><img src="../tmconvmc/images/vsan-del.png?classes=shadow&amp;height=20pc" alt=""></p>
-<p>Let´s try to restore our application on the latest stage by selecting our backup and klick &ldquo;RESTORE&rdquo;.</p>
+<p><strong>Let´s try to restore our application on the latest stage by selecting our backup and klick &ldquo;RESTORE&rdquo;.</strong></p>
 <p><img src="../tmconvmc/images/tmc-restore.png?classes=shadow&amp;height=20pc" alt=""></p>
-<p>Immediately Tanzu Mission Control starts the restore process via Velero and the Namespace including all the resources is created again on our Cluster:</p>
+<p><strong>Immediately Tanzu Mission Control starts the restore process via Velero and the Namespace including all the resources is created again on our Cluster:</strong></p>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-yaml" data-lang="yaml"><span style="color:#ae81ff">$ k get po -n prod-app</span>
 <span style="color:#ae81ff">NAME                      READY   STATUS    RESTARTS   AGE</span>
 <span style="color:#ae81ff">mysql-7fc6d65488-l2n9t    1/1     Running   0          17s</span>
@@ -541,12 +541,18 @@ No resources found in prod-app namespace.
 <span style="color:#ae81ff">tkg@lx-tkg004:~/vmworld2020/tito-prod$ k get pvc -n prod-app</span>
 <span style="color:#ae81ff">NAME             STATUS   VOLUME                                     CAPACITY   ACCESS MODES   STORAGECLASS   AGE</span>
 <span style="color:#ae81ff">mysql-pv-claim   Bound    pvc-4e5e10af-ebf0-4a82-b669-a78836fc84e6   20Gi       RWO            default        24s</span>
-</code></pre></div><p>Let´s verify that our volume is visible in the vSphere UI as well. We can see that velero has applied additional labels to the volume:</p>
+</code></pre></div><p><strong>Let´s verify that our volume is visible in the vSphere UI as well. We can see that Velero has applied additional labels to the volume:</strong></p>
 <p><img src="../tmconvmc/images/vsan-restore.png?classes=shadow&amp;height=20pc" alt=""></p>
-<p>Last but not least let´s verify the functionality of our application and the entries in the database:</p>
+<p><strong>Last but not least let´s verify the functionality of our application and the entries in the database:</strong></p>
 <p><img src="../tmconvmc/images/db.png?classes=shadow&amp;height=10pc" alt=""></p>
-<p>Wooohoooo! We´re seeing that we successfully restored our K8s application leveraging Tanzu Mission control from a S3-Bucket located in the connected VPC of our VMConAWS SDDC. This post already got longer than intended but it is still only scratching the surface of what´s possible when combining TMC and VMware Cloud.</p>
-<p>In a Multi-Cloud reality security and governance is becoming more important than ever before. Tanzu Mission Control helps to simplify provisioning, lifecycle and to apply security and governance policies to your K8s Clusters - no matter if they already exist On Prem or in any Cloud.</p>
+<p>Wooohoooo! We´re seeing that we successfully restored our K8s application leveraging Tanzu Mission control to a TKG Cluster running on VMware Cloud. The S3-Bucket is located in the connected VPC of our VMConAWS SDDC.</p>
+<p>This post already got longer than planned but it is still only scratching the surface of what´s possible when combining TMC and VMware Cloud.</p>
+<p>In a Multi-Cloud reality security and governance are becoming more important than ever before. Tanzu Mission Control helps to simplify provisioning, lifecycle and to apply security and governance policies to your K8s Clusters - no matter if they already exist or just need to be provisioned On Prem or in the Cloud.</p>
+<p><strong>Useful Links:</strong></p>
+<ul>
+<li><a href="https://console.cloud.vmware.com/">VMware Cloud Console</a></li>
+<li><a href="https://docs.vmware.com/en/VMware-Tanzu-Mission-Control/services/tanzumc-using/GUID-89926F80-050A-4F1C-9D04-D56D5F453995.html">TMC-Documentation</a></li>
+</ul>
 
 
 
@@ -716,19 +722,19 @@ No resources found in prod-app namespace.
     <div style="left: -1000px; overflow: scroll; position: absolute; top: -1000px; border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;">
       <div style="border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;"></div>
     </div>
-    <script src="/js/clipboard.min.js?1606320765"></script>
-    <script src="/js/perfect-scrollbar.min.js?1606320765"></script>
-    <script src="/js/perfect-scrollbar.jquery.min.js?1606320765"></script>
-    <script src="/js/jquery.sticky.js?1606320765"></script>
-    <script src="/js/featherlight.min.js?1606320765"></script>
-    <script src="/js/highlight.pack.js?1606320765"></script>
+    <script src="/js/clipboard.min.js?1606331370"></script>
+    <script src="/js/perfect-scrollbar.min.js?1606331370"></script>
+    <script src="/js/perfect-scrollbar.jquery.min.js?1606331370"></script>
+    <script src="/js/jquery.sticky.js?1606331370"></script>
+    <script src="/js/featherlight.min.js?1606331370"></script>
+    <script src="/js/highlight.pack.js?1606331370"></script>
     <script>hljs.initHighlightingOnLoad();</script>
-    <script src="/js/modernizr.custom-3.6.0.js?1606320765"></script>
-    <script src="/js/learn.js?1606320765"></script>
-    <script src="/js/hugo-learn.js?1606320765"></script>
+    <script src="/js/modernizr.custom-3.6.0.js?1606331370"></script>
+    <script src="/js/learn.js?1606331370"></script>
+    <script src="/js/hugo-learn.js?1606331370"></script>
     
         
-            <script src="/mermaid/mermaid.js?1606320765"></script>
+            <script src="/mermaid/mermaid.js?1606331370"></script>
         
         <script>
             mermaid.initialize({ startOnLoad: true });
