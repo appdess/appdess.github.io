@@ -13,9 +13,8 @@
       <pubDate>Wed, 25 Nov 2020 00:00:00 +0000</pubDate>
       
       <guid>https://alexdess.cloud/posts/tmconvmc/</guid>
-      <description>Secure and backup your Kubernetes Clusters The VMware Tanzu portfolio is a set of products which has the goal to modernize your infrastructure and applications in order to deliver better software to production. Fast, secure and continuously. In my previous Blogposts I focussed on &amp;ldquo;TKG+&amp;rdquo; which was now transformed to the &amp;ldquo;Tanzu Standard&amp;rdquo; offering.
-Tanu Standard includes:
- Tanzu Kubernetes Grid (Short TKG) Tanzu Mission Control Contour as a Ingress controller to provide L7 Load-Balancing The Harbor Container Registry Prometheus and Grafana for Observability Fluent-Bit for logging (best combined with Log-Insight Cloud)  I encourage you to review the Tanzu Standard Solutions brief to get a holistic overview regarding the offering.</description>
+      <description>Consistent K8s security and operations across teams and Clouds In this Blogpost we will use a TKG Cluster deployed on VMware Cloud on AWS and integrate it with Tanzu Mission Control. We will make use of the Identity and Access Management, Compliance Policy Enigne and integrated Backup Capabilties of Tanzu Mission Control.
+The Tanzu Portfolio The VMware Tanzu portfolio is a set of products which has the goal to modernize your infrastructure and applications in order to deliver better software to production.</description>
     </item>
     
     <item>

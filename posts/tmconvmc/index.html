@@ -12,21 +12,21 @@
     <title>TMC - Tanzu Mission Control - alexdess.cloud</title>
 
     
-    <link href="/css/nucleus.css?1606331459" rel="stylesheet">
-    <link href="/css/fontawesome-all.min.css?1606331459" rel="stylesheet">
-    <link href="/css/hybrid.css?1606331459" rel="stylesheet">
-    <link href="/css/featherlight.min.css?1606331459" rel="stylesheet">
-    <link href="/css/perfect-scrollbar.min.css?1606331459" rel="stylesheet">
-    <link href="/css/auto-complete.css?1606331459" rel="stylesheet">
-    <link href="/css/atom-one-dark-reasonable.css?1606331459" rel="stylesheet">
-    <link href="/css/theme.css?1606331459" rel="stylesheet">
-    <link href="/css/hugo-theme.css?1606331459" rel="stylesheet">
+    <link href="/css/nucleus.css?1606375500" rel="stylesheet">
+    <link href="/css/fontawesome-all.min.css?1606375500" rel="stylesheet">
+    <link href="/css/hybrid.css?1606375500" rel="stylesheet">
+    <link href="/css/featherlight.min.css?1606375500" rel="stylesheet">
+    <link href="/css/perfect-scrollbar.min.css?1606375500" rel="stylesheet">
+    <link href="/css/auto-complete.css?1606375500" rel="stylesheet">
+    <link href="/css/atom-one-dark-reasonable.css?1606375500" rel="stylesheet">
+    <link href="/css/theme.css?1606375500" rel="stylesheet">
+    <link href="/css/hugo-theme.css?1606375500" rel="stylesheet">
     
-    <link href="/css/theme-blue.css?1606331459" rel="stylesheet">
+    <link href="/css/theme-blue.css?1606375500" rel="stylesheet">
     
-    <link href="/css/foo.css?1606331459" rel="stylesheet"><link href="/css/bar.css?1606331459" rel="stylesheet">
+    <link href="/css/foo.css?1606375500" rel="stylesheet"><link href="/css/bar.css?1606375500" rel="stylesheet">
 
-    <script src="/js/jquery-3.3.1.min.js?1606331459"></script>
+    <script src="/js/jquery-3.3.1.min.js?1606375500"></script>
 
     <style>
       :root #header + #content > #left > #rlblock_left{
@@ -54,14 +54,14 @@
     <span data-search-clear=""><i class="fas fa-times"></i></span>
 </div>
 
-<script type="text/javascript" src="/js/lunr.min.js?1606331459"></script>
-<script type="text/javascript" src="/js/auto-complete.js?1606331459"></script>
+<script type="text/javascript" src="/js/lunr.min.js?1606375500"></script>
+<script type="text/javascript" src="/js/auto-complete.js?1606375500"></script>
 <script type="text/javascript">
     
         var baseurl = "https:\/\/alexdess.cloud";
     
 </script>
-<script type="text/javascript" src="/js/search.js?1606331459"></script>
+<script type="text/javascript" src="/js/search.js?1606375500"></script>
 
     
   </div>
@@ -333,10 +333,11 @@
     <div class="wrapper">
 <nav id="TableOfContents">
   <ul>
-    <li><a href="#secure-and-backup-your-kubernetes-clusters">Secure and backup your Kubernetes Clusters</a>
+    <li><a href="#consistent-k8s-security-and-operations-across-teams-and-clouds">Consistent K8s security and operations across teams and Clouds</a>
       <ul>
+        <li><a href="#the-tanzu-portfolio">The Tanzu Portfolio</a></li>
         <li><a href="#tanzu-mission-control">Tanzu Mission Control</a></li>
-        <li><a href="#harbor-container-registry-policy">Harbor Container Registry Policy</a></li>
+        <li><a href="#container-registry-policies">Container Registry Policies</a></li>
       </ul>
     </li>
     <li><a href="#backup-application-data-from-your-k8s-clusters">Backup Application data from your K8s Clusters</a></li>
@@ -375,35 +376,36 @@
 
 
 
-	<h2 id="secure-and-backup-your-kubernetes-clusters">Secure and backup your Kubernetes Clusters</h2>
-<p>The VMware Tanzu portfolio is a set of products which has the goal to modernize your infrastructure and applications in order to deliver better software to production. Fast, secure and continuously. In my previous Blogposts I focussed on &ldquo;TKG+&rdquo; which was now transformed to the &ldquo;Tanzu Standard&rdquo; offering.</p>
-<p><strong>Tanu Standard includes:</strong></p>
+	<h2 id="consistent-k8s-security-and-operations-across-teams-and-clouds">Consistent K8s security and operations across teams and Clouds</h2>
+<p>In this Blogpost we will use a TKG Cluster deployed on VMware Cloud on AWS and integrate it with Tanzu Mission Control. We will make use of the Identity and Access Management, Compliance Policy Enigne and integrated Backup Capabilties of Tanzu Mission Control.</p>
+<h3 id="the-tanzu-portfolio">The Tanzu Portfolio</h3>
+<p>The VMware Tanzu portfolio is a set of products which has the goal to modernize your infrastructure and applications in order to deliver better software to production. Fast, secure and continuously. In my <a href="http://localhost:1313/posts/tkgvmc/">previous Blogposts</a> I focussed on &ldquo;TKG+&rdquo; which was now transformed to the &ldquo;Tanzu Standard&rdquo; offering.</p>
+<p><strong>Tanzu Standard includes:</strong></p>
 <ul>
 <li>Tanzu Kubernetes Grid (Short TKG)</li>
 <li>Tanzu Mission Control</li>
 <li>Contour as a Ingress controller to provide L7 Load-Balancing</li>
 <li>The Harbor Container Registry</li>
 <li>Prometheus and Grafana for Observability</li>
-<li>Fluent-Bit for logging (best combined with Log-Insight Cloud)</li>
+<li>Fluent Bit for log forwarding</li>
 </ul>
-<p>I encourage you to review the <a href="https://d1fto35gcfffzn.cloudfront.net/tanzu/VMware-Tanzu-Standard-Solution-Brief.pdf">Tanzu Standard Solutions brief</a> to get a holistic overview regarding the offering.</p>
+<p>You can have a look at the <a href="https://d1fto35gcfffzn.cloudfront.net/tanzu/VMware-Tanzu-Standard-Solution-Brief.pdf">Tanzu Standard Solutions brief</a> to get a better overview regarding Tanzu Standard.</p>
 <p>I am going to focus on <strong>Tanzu Mission Control</strong> and it´s capabilities in this blogpost.</p>
 <h3 id="tanzu-mission-control">Tanzu Mission Control</h3>
-<p>Tanzu Mission Control - short &ldquo;TMC&rdquo; allows to manage all our K8s clusters, regardless where they run and how they are deployed. It is a centralized management platform where you can secure and operate your Kubernetes infrastructure across multiple teams and even Clouds. Customers choosing to leverage the &ldquo;Tanzu Standard&rdquo; offering with their VMware Cloud deployment are eligible to use Tanzu Mission Control as well.</p>
-<p>Tanzu Mission control addresses a lot of challenges which most companies face when  running Kubernetes at scale. We´re going to focus on the following in this Blogpost:</p>
+<p>Tanzu Mission Control - short &ldquo;TMC&rdquo; allows to manage all your K8s clusters, regardless where they run and how they are deployed. It is a centralized management platform where you can secure and operate your Kubernetes infrastructure across multiple teams and even Clouds. Customers choosing to leverage the &ldquo;Tanzu Standard&rdquo; offering with their VMware Cloud deployment are eligible to use Tanzu Mission Control as well.</p>
+<p>Tanzu Mission Control addresses a lot of challenges which most companies face when  running Kubernetes at scale. We´re going to focus on the following in this Blogpost:</p>
 <ul>
-<li>A streamlined Identitiy and Access Management across Clusters in various Clouds</li>
-<li>Enforcing Compliance and Security Policies</li>
-<li>Backup of your Applications running in Kubernetes</li>
+<li><strong>A streamlined Identitiy and Access Management across Clusters in various Clouds</strong></li>
+<li><strong>Enforcing Compliance and Security Policies</strong></li>
+<li><strong>Backup of your Applications running in Kubernetes</strong></li>
 </ul>
-<p>Thinking of those challenges Tanzu Mission control supports the infrastructure and the development teams. It provides independence to consume  Infrastructure for development teams via API which is a huge benefit and for sure one of the reasons why the Cloud is that successful.</p>
+<p>Thinking of those challenges Tanzu Mission Control supports the infrastructure and the development teams. It provides independence to consume  Infrastructure for development teams via API which is a huge benefit and for sure one of the reasons why the Cloud is that successful.</p>
 <p>Moving from an ticket-driven approach to provide infrastructure to a completely self service approach where infrastructure can be consumed on-demand and via API really empowers development teams to increase the speed to build and ship their applications.</p>
-<p>On the other hand Tanzu Mission Control provides the necessary consistency for operators and SREs to manage, lifecycle and secure the various Kubernetes Clusters. API driven sounds great but usually it get´s really challenging when dealing with various Cloud Providers. VMware Cloud and TMC ensures a consistent operator experience. Operators can attach upstream conformant Kubernetes Clusters from any Cloud Provider and leverage the capabilities of TMC to manage and secure those clusters.</p>
-<p>In this Blogpost we will use a TKG Cluster, integrate it with Tanzu Mission control and we´re going to make use of the Identity and Access Management as well as the compliance policy enigne of Tanzu Mission Control.</p>
+<p>On the other hand Tanzu Mission Control provides the necessary consistency for operators and SREs to manage, lifecycle and secure the various Kubernetes Clusters. API driven sounds great but usually it get´s really challenging when dealing with various Cloud Providers. VMware Cloud and TMC ensures a consistent operator experience. Operators can attach upstream conformant Kubernetes Clusters from any Cloud Provider and leverage the capabilities of TMC to manage and secure those clusters. This way it is possible to secure and support Clusters which have been provisioned in the past by various teams.</p>
 <h4 id="attaching-our-cluster">Attaching our Cluster</h4>
-<p>As a first step we need to attach our created Kubernetes Cluster to TMC. Note that in a later version it will be possible to even create the TKG Kubernetes Cluster running on VMC from Tanzu Mission Control. For the time being we <strong>created the cluster &ldquo;tkg-wl-03&rdquo; with the tkg-cli</strong> and we are going to attach it to Tanzu Mission Control.</p>
+<p>As a first step we need to attach our already created TKG Cluster running in VMware Cloud on AWS to TMC. With a future version of TMC comming soon it will be possible to directly create new TKG Clusters from TMC in VMConAWS. For the time being we <strong>created the cluster &ldquo;tkg-wl-03&rdquo; with the tkg-cli</strong> and we are going to attach it to Tanzu Mission Control. If you want to know more about how to deploy TKG Clusters on VMware Cloud please read <a href="https://alexdess.cloud/posts/tkgvmc/">this previous post</a>.</p>
 <p>Let´s talk quickly about the concepts of handling resources in Tanzu Mission Control. The construct of Cluster Groups helps you to group your Kubernetes Clusters. Each Cluster you attach or create belongs to a cluster group.</p>
-<p>Workspaces allow you to group Namespaces of different clusters and assign them to logical groups. A example would be to align them with environments or projects. You can add existing Namespaces to a workspace or create a new one.</p>
+<p>Workspaces allow you to group Namespaces of different clusters and assign them to logical groups. A example would be to align them with environments or projects. You can add existing Namespaces to a Workspace or create new Namespaces from TMC.</p>
 
 <div class="mermaid" align="center">
 graph TD;
@@ -427,14 +429,15 @@ secret/tmc-access-secret created
 ....
 </code></pre></div><p>We can verify in the UI the Cluster has been successfully attached and a connection is established.</p>
 <h4 id="create-a-new-namespace-for-our-prod-app"><strong>Create a new Namespace for our prod-app</strong></h4>
-<p>Now that we´ve attached the Cluster successfully to Tanzu Mission Control we can make use of TMC to manage the Cluster. Next we´re going to create a Namespace called &ldquo;prod-app&rdquo; which is intended for the deployment of our application.
+<p>Now that we´ve attached the Cluster successfully to Tanzu Mission Control we can make use of TMC to manage the Cluster. Next we´re going to create a Namespace called &ldquo;prod-app&rdquo; which is intended for the deployment of our application. We assign this namespace to our Workspace called &ldquo;prod&rdquo;.
 <img src="../tmconvmc/images/new-namespace.png?classes=shadow&amp;height=30pc" alt=""></p>
 <p><strong>Give Access to our Developers</strong></p>
-<p>We´ve successfully attached our prod-cluster and created a new namespace. Next we´re going to create an access policy which will allow our developers to access the namespace but deny them to change the policies applied to it.</p>
-<p>The setting will be applied to all namespaces attached to the Workspace &ldquo;prod&rdquo;. We want them to be able to work with all privileges while ensuring that the policies we´ve set are enforced. Therefore we assign the right &ldquo;cluster.edit&rdquo; which gives admin privileges without allowing to change the policies which we will set later on.
+<p>We´ve successfully attached our Cluster, created a new Namespace and assigned it to the &ldquo;prod&rdquo; Workspace. Next we´re going to create an access policy which will allow our developers to access all the Namespaces which are assigned to this Workspace but deny them to change the policies applied to it.</p>
+<p>Once created our setting will be applied to all Namespaces attached to the Workspace &ldquo;prod&rdquo;. We want them to be able to work with all privileges while ensuring that the policies we´ve set are enforced. Therefore we assign the right &ldquo;cluster.edit&rdquo; which gives admin privileges without allowing to change the policies which we will set later on.</p>
+<p><strong>The screenshot shows the assignement to one &ldquo;developer&rdquo; - &ldquo;<a href="mailto:adess@vmware.com">adess@vmware.com</a>&rdquo;:</strong>
 <img src="../tmconvmc/images/dev-access.png?classes=shadow&amp;height=25pc" alt=""></p>
-<h3 id="harbor-container-registry-policy">Harbor Container Registry Policy</h3>
-<p>We want that only verified Images, stored in our private harbor container registry can be deployed on our production Workspace. Therefore we can leverage the tab &ldquo;Image registry&rdquo; to create such a policy.</p>
+<h3 id="container-registry-policies">Container Registry Policies</h3>
+<p>We want that only verified Images, stored in our private Harbor container registry can be deployed on our &ldquo;prod&rdquo; Workspace. Therefore we can leverage the tab &ldquo;Image registry&rdquo; to create such a policy.</p>
 <p><img src="../tmconvmc/images/pull-policy.png?classes=shadow&amp;height=25pc" alt=""></p>
 <p>You can add multiple registry patterns if you wish. I am going to allow all registries located in my domain &ldquo;*cemea.vmc&rdquo;. My private Harbor registry FQDN is &ldquo;harbor.cemea.vmc&rdquo;.</p>
 <p>Let´s create a simple deployment to verify if our private registry is working and if the policy is enforced.</p>
@@ -490,7 +493,7 @@ No resources found in prod-app namespace.
 <h2 id="backup-application-data-from-your-k8s-clusters">Backup Application data from your K8s Clusters</h2>
 <p>An important, often underestimated topic is the backup of your data which is stored on your K8s Clusters.  Most of us having for sure heard the phrase &quot; containers are stateless by default&quot;. There are indeed stateless applications. A web search engine like the big G** for example where you type your question and hit enter. When you´re interrupted at any time or close the window accidentally you just start over. It´s one request and you´re getting one answer.</p>
 <p>Your Mail Application, Online Banking or our Tito App are stateful applications. Requests are handled in the context of previous transactions  and state needs to be persisted. The majority of applications today are stateful applications. Kubernetes provides persistent Storage to applications via Persistent Volume Claims - short PVC. Our Tito Application for example stores it´s requests in a MySQL database which is backed by a Persistent Volume leveraging our vSAN Datastore in VMC:</p>
-<p><strong>Let´s show this persistent volume in K8s and vSphere:</strong></p>
+<p><strong>Let´s show this Persistent Volume in K8s and vSphere:</strong></p>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-yaml" data-lang="yaml"><span style="color:#ae81ff">$ kubectl get pvc -A</span>
 <span style="color:#ae81ff">NAMESPACE   NAME             STATUS   VOLUME                                    </span>
 <span style="color:#ae81ff">prod-app    mysql-pv-claim   Bound    pvc-7cd79711-59ad-49d2-8e9d-e4c8ceb6fc6f</span>
@@ -525,9 +528,9 @@ No resources found in prod-app namespace.
 <p><strong>Now we´re going to delete our whole namespace on the K8s Cluster containing our application and all the data:</strong></p>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-yaml" data-lang="yaml"><span style="color:#ae81ff">k delete ns prod-app</span>
 <span style="color:#ae81ff">namespace &#34;prod-app&#34; deleted</span>
-</code></pre></div><p><strong>All resources have been deleted including our persistent volume which was viewable on the vSAN Datastore before:</strong></p>
+</code></pre></div><p><strong>All resources have been deleted including our Persistent Volume which was viewable on the vSAN Datastore before:</strong></p>
 <p><img src="../tmconvmc/images/vsan-del.png?classes=shadow&amp;height=20pc" alt=""></p>
-<p><strong>Let´s try to restore our application on the latest stage by selecting our backup and klick &ldquo;RESTORE&rdquo;.</strong></p>
+<p><strong>Let´s try to restore our application to the latest stage by selecting our backup and klick &ldquo;RESTORE&rdquo;.</strong></p>
 <p><img src="../tmconvmc/images/tmc-restore.png?classes=shadow&amp;height=20pc" alt=""></p>
 <p><strong>Immediately Tanzu Mission Control starts the restore process via Velero and the Namespace including all the resources is created again on our Cluster:</strong></p>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-yaml" data-lang="yaml"><span style="color:#ae81ff">$ k get po -n prod-app</span>
@@ -547,7 +550,8 @@ No resources found in prod-app namespace.
 <p><img src="../tmconvmc/images/db.png?classes=shadow&amp;height=10pc" alt=""></p>
 <p>Wooohoooo! We´re seeing that we successfully restored our K8s application leveraging Tanzu Mission control to a TKG Cluster running on VMware Cloud. The S3-Bucket is located in the connected VPC of our VMConAWS SDDC.</p>
 <p>This post already got longer than planned but it is still only scratching the surface of what´s possible when combining TMC and VMware Cloud.</p>
-<p>In a Multi-Cloud reality security and governance are becoming more important than ever before. Tanzu Mission Control helps to simplify provisioning, lifecycle and to apply security and governance policies to your K8s Clusters - no matter if they already exist or just need to be provisioned On Prem or in the Cloud.</p>
+<p>In a Multi Cloud world security and governance are becoming more important than ever before. Tanzu Mission Control helps to simplify provisioning, lifecycle and to apply security and governance policies to your K8s Clusters - no matter if they already exist or just need to be provisioned On Prem or in the Cloud.</p>
+<p>Thanks for reading and drop me a message if you have suggestions or remarks :-).</p>
 <p><strong>Useful Links:</strong></p>
 <ul>
 <li><a href="https://console.cloud.vmware.com/">VMware Cloud Console</a></li>
@@ -722,19 +726,19 @@ No resources found in prod-app namespace.
     <div style="left: -1000px; overflow: scroll; position: absolute; top: -1000px; border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;">
       <div style="border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;"></div>
     </div>
-    <script src="/js/clipboard.min.js?1606331459"></script>
-    <script src="/js/perfect-scrollbar.min.js?1606331459"></script>
-    <script src="/js/perfect-scrollbar.jquery.min.js?1606331459"></script>
-    <script src="/js/jquery.sticky.js?1606331459"></script>
-    <script src="/js/featherlight.min.js?1606331459"></script>
-    <script src="/js/highlight.pack.js?1606331459"></script>
+    <script src="/js/clipboard.min.js?1606375500"></script>
+    <script src="/js/perfect-scrollbar.min.js?1606375500"></script>
+    <script src="/js/perfect-scrollbar.jquery.min.js?1606375500"></script>
+    <script src="/js/jquery.sticky.js?1606375500"></script>
+    <script src="/js/featherlight.min.js?1606375500"></script>
+    <script src="/js/highlight.pack.js?1606375500"></script>
     <script>hljs.initHighlightingOnLoad();</script>
-    <script src="/js/modernizr.custom-3.6.0.js?1606331459"></script>
-    <script src="/js/learn.js?1606331459"></script>
-    <script src="/js/hugo-learn.js?1606331459"></script>
+    <script src="/js/modernizr.custom-3.6.0.js?1606375500"></script>
+    <script src="/js/learn.js?1606375500"></script>
+    <script src="/js/hugo-learn.js?1606375500"></script>
     
         
-            <script src="/mermaid/mermaid.js?1606331459"></script>
+            <script src="/mermaid/mermaid.js?1606375500"></script>
         
         <script>
             mermaid.initialize({ startOnLoad: true });
