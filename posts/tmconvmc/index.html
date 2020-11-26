@@ -12,21 +12,21 @@
     <title>TMC - Tanzu Mission Control - alexdess.cloud</title>
 
     
-    <link href="/css/nucleus.css?1606375500" rel="stylesheet">
-    <link href="/css/fontawesome-all.min.css?1606375500" rel="stylesheet">
-    <link href="/css/hybrid.css?1606375500" rel="stylesheet">
-    <link href="/css/featherlight.min.css?1606375500" rel="stylesheet">
-    <link href="/css/perfect-scrollbar.min.css?1606375500" rel="stylesheet">
-    <link href="/css/auto-complete.css?1606375500" rel="stylesheet">
-    <link href="/css/atom-one-dark-reasonable.css?1606375500" rel="stylesheet">
-    <link href="/css/theme.css?1606375500" rel="stylesheet">
-    <link href="/css/hugo-theme.css?1606375500" rel="stylesheet">
+    <link href="/css/nucleus.css?1606376561" rel="stylesheet">
+    <link href="/css/fontawesome-all.min.css?1606376561" rel="stylesheet">
+    <link href="/css/hybrid.css?1606376561" rel="stylesheet">
+    <link href="/css/featherlight.min.css?1606376561" rel="stylesheet">
+    <link href="/css/perfect-scrollbar.min.css?1606376561" rel="stylesheet">
+    <link href="/css/auto-complete.css?1606376561" rel="stylesheet">
+    <link href="/css/atom-one-dark-reasonable.css?1606376561" rel="stylesheet">
+    <link href="/css/theme.css?1606376561" rel="stylesheet">
+    <link href="/css/hugo-theme.css?1606376561" rel="stylesheet">
     
-    <link href="/css/theme-blue.css?1606375500" rel="stylesheet">
+    <link href="/css/theme-blue.css?1606376561" rel="stylesheet">
     
-    <link href="/css/foo.css?1606375500" rel="stylesheet"><link href="/css/bar.css?1606375500" rel="stylesheet">
+    <link href="/css/foo.css?1606376561" rel="stylesheet"><link href="/css/bar.css?1606376561" rel="stylesheet">
 
-    <script src="/js/jquery-3.3.1.min.js?1606375500"></script>
+    <script src="/js/jquery-3.3.1.min.js?1606376561"></script>
 
     <style>
       :root #header + #content > #left > #rlblock_left{
@@ -54,14 +54,14 @@
     <span data-search-clear=""><i class="fas fa-times"></i></span>
 </div>
 
-<script type="text/javascript" src="/js/lunr.min.js?1606375500"></script>
-<script type="text/javascript" src="/js/auto-complete.js?1606375500"></script>
+<script type="text/javascript" src="/js/lunr.min.js?1606376561"></script>
+<script type="text/javascript" src="/js/auto-complete.js?1606376561"></script>
 <script type="text/javascript">
     
         var baseurl = "https:\/\/alexdess.cloud";
     
 </script>
-<script type="text/javascript" src="/js/search.js?1606375500"></script>
+<script type="text/javascript" src="/js/search.js?1606376561"></script>
 
     
   </div>
@@ -377,9 +377,9 @@
 
 
 	<h2 id="consistent-k8s-security-and-operations-across-teams-and-clouds">Consistent K8s security and operations across teams and Clouds</h2>
-<p>In this Blogpost we will use a TKG Cluster deployed on VMware Cloud on AWS and integrate it with Tanzu Mission Control. We will make use of the Identity and Access Management, Compliance Policy Enigne and integrated Backup Capabilties of Tanzu Mission Control.</p>
+<p>In this Blogpost we will use a Tanzu Kubernetes Grid Cluster deployed on VMware Cloud on AWS and integrate it with Tanzu Mission Control. We will make use of the Identity and Access Management, Compliance Policy Enigne and integrated Backup Capabilties of Tanzu Mission Control.</p>
 <h3 id="the-tanzu-portfolio">The Tanzu Portfolio</h3>
-<p>The VMware Tanzu portfolio is a set of products which has the goal to modernize your infrastructure and applications in order to deliver better software to production. Fast, secure and continuously. In my <a href="http://localhost:1313/posts/tkgvmc/">previous Blogposts</a> I focussed on &ldquo;TKG+&rdquo; which was now transformed to the &ldquo;Tanzu Standard&rdquo; offering.</p>
+<p>The VMware Tanzu portfolio is a set of products which has the goal to modernize your infrastructure and applications in order to deliver better software to production - fast, secure and continuously. In my <a href="http://localhost:1313/posts/tkgvmc/">previous Blogposts</a> I focussed on &ldquo;TKG+&rdquo; which was now transformed to the &ldquo;Tanzu Standard&rdquo; offering.</p>
 <p><strong>Tanzu Standard includes:</strong></p>
 <ul>
 <li>Tanzu Kubernetes Grid (Short TKG)</li>
@@ -403,9 +403,9 @@
 <p>Moving from an ticket-driven approach to provide infrastructure to a completely self service approach where infrastructure can be consumed on-demand and via API really empowers development teams to increase the speed to build and ship their applications.</p>
 <p>On the other hand Tanzu Mission Control provides the necessary consistency for operators and SREs to manage, lifecycle and secure the various Kubernetes Clusters. API driven sounds great but usually it get´s really challenging when dealing with various Cloud Providers. VMware Cloud and TMC ensures a consistent operator experience. Operators can attach upstream conformant Kubernetes Clusters from any Cloud Provider and leverage the capabilities of TMC to manage and secure those clusters. This way it is possible to secure and support Clusters which have been provisioned in the past by various teams.</p>
 <h4 id="attaching-our-cluster">Attaching our Cluster</h4>
-<p>As a first step we need to attach our already created TKG Cluster running in VMware Cloud on AWS to TMC. With a future version of TMC comming soon it will be possible to directly create new TKG Clusters from TMC in VMConAWS. For the time being we <strong>created the cluster &ldquo;tkg-wl-03&rdquo; with the tkg-cli</strong> and we are going to attach it to Tanzu Mission Control. If you want to know more about how to deploy TKG Clusters on VMware Cloud please read <a href="https://alexdess.cloud/posts/tkgvmc/">this previous post</a>.</p>
-<p>Let´s talk quickly about the concepts of handling resources in Tanzu Mission Control. The construct of Cluster Groups helps you to group your Kubernetes Clusters. Each Cluster you attach or create belongs to a cluster group.</p>
-<p>Workspaces allow you to group Namespaces of different clusters and assign them to logical groups. A example would be to align them with environments or projects. You can add existing Namespaces to a Workspace or create new Namespaces from TMC.</p>
+<p>As a first step we need to attach our already created TKG Cluster running in VMware Cloud on AWS to TMC. With a future version of TMC coming soon it will be possible to directly create new TKG Clusters from TMC in VMConAWS. For the time being we <strong>created the cluster &ldquo;tkg-wl-03&rdquo; with the tkg-cli</strong> and we are going to attach it to Tanzu Mission Control. If you want to know more about how to deploy TKG Clusters on VMware Cloud please read <a href="https://alexdess.cloud/posts/tkgvmc/">this previous post</a>.</p>
+<p>Let´s talk quickly about the concepts of handling resources in Tanzu Mission Control. The construct of Cluster Groups helps you to group your Kubernetes Clusters. Each Cluster you attach or create belongs to a Cluster Group.</p>
+<p>Workspaces allow you to group Namespaces of different Clusters and assign them to logical groups. A example would be to align them with environments or projects. You can add existing Namespaces to a Workspace or create new Namespaces from TMC.</p>
 
 <div class="mermaid" align="center">
 graph TD;
@@ -486,7 +486,7 @@ No resources found in prod-app namespace.
 </code></pre></div><p><strong>Let´s inspect our deployment to understand what´s happening:</strong></p>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">k describe replicaset -n prod-app
 ...<span style="color:#e6db74">&#34;validation.policies.tmc.cloud.vmware.com&#34;</span> denied the request: **failed to match image policies:** spec.containers<span style="color:#f92672">[</span>0<span style="color:#f92672">]</span>.image: Forbidden: no matching image policy
-</code></pre></div><p>We see that NO pods have been created due to the image policy and we´re getting a clear error -<strong>&ldquo;failed to match image policies:&rdquo;.</strong></p>
+</code></pre></div><p>We see that NO pods have been created due to the image policy and we´re getting a clear error -<strong>&ldquo;Forbidden: no matching image policy&rdquo;.</strong></p>
 <p>We verified that our policy we applied on the Workspace is working and forbids the container image pull from the public container registry. We can verify this in the TMC UI as well:</p>
 <p><img src="../tmconvmc/images/pull-deny.png?classes=shadow&amp;height=25pc" alt=""></p>
 <p>If and what image policy you´re going to use is up to you. It defenetely makes sense to leverage this functionality for example for production workloads in order to ensure only secure, scanned images are deployed.</p>
@@ -726,19 +726,19 @@ No resources found in prod-app namespace.
     <div style="left: -1000px; overflow: scroll; position: absolute; top: -1000px; border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;">
       <div style="border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;"></div>
     </div>
-    <script src="/js/clipboard.min.js?1606375500"></script>
-    <script src="/js/perfect-scrollbar.min.js?1606375500"></script>
-    <script src="/js/perfect-scrollbar.jquery.min.js?1606375500"></script>
-    <script src="/js/jquery.sticky.js?1606375500"></script>
-    <script src="/js/featherlight.min.js?1606375500"></script>
-    <script src="/js/highlight.pack.js?1606375500"></script>
+    <script src="/js/clipboard.min.js?1606376561"></script>
+    <script src="/js/perfect-scrollbar.min.js?1606376561"></script>
+    <script src="/js/perfect-scrollbar.jquery.min.js?1606376561"></script>
+    <script src="/js/jquery.sticky.js?1606376561"></script>
+    <script src="/js/featherlight.min.js?1606376561"></script>
+    <script src="/js/highlight.pack.js?1606376561"></script>
     <script>hljs.initHighlightingOnLoad();</script>
-    <script src="/js/modernizr.custom-3.6.0.js?1606375500"></script>
-    <script src="/js/learn.js?1606375500"></script>
-    <script src="/js/hugo-learn.js?1606375500"></script>
+    <script src="/js/modernizr.custom-3.6.0.js?1606376561"></script>
+    <script src="/js/learn.js?1606376561"></script>
+    <script src="/js/hugo-learn.js?1606376561"></script>
     
         
-            <script src="/mermaid/mermaid.js?1606375500"></script>
+            <script src="/mermaid/mermaid.js?1606376561"></script>
         
         <script>
             mermaid.initialize({ startOnLoad: true });
