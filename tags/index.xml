@@ -6,11 +6,20 @@
     <description>Recent content in Tags on alexdess.cloud</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Wed, 25 Nov 2020 00:00:00 +0000</lastBuildDate><atom:link href="https://alexdess.cloud/tags/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Thu, 03 Dec 2020 00:00:00 +0000</lastBuildDate><atom:link href="https://alexdess.cloud/tags/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Automation</title>
+      <link>https://alexdess.cloud/tags/automation/</link>
+      <pubDate>Thu, 03 Dec 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://alexdess.cloud/tags/automation/</guid>
+      <description></description>
+    </item>
+    
     <item>
       <title>K8s</title>
       <link>https://alexdess.cloud/tags/k8s/</link>
-      <pubDate>Wed, 25 Nov 2020 00:00:00 +0000</pubDate>
+      <pubDate>Thu, 03 Dec 2020 00:00:00 +0000</pubDate>
       
       <guid>https://alexdess.cloud/tags/k8s/</guid>
       <description></description>
@@ -19,7 +28,7 @@
     <item>
       <title>TMC</title>
       <link>https://alexdess.cloud/tags/tmc/</link>
-      <pubDate>Wed, 25 Nov 2020 00:00:00 +0000</pubDate>
+      <pubDate>Thu, 03 Dec 2020 00:00:00 +0000</pubDate>
       
       <guid>https://alexdess.cloud/tags/tmc/</guid>
       <description></description>
@@ -28,7 +37,7 @@
     <item>
       <title>VMC</title>
       <link>https://alexdess.cloud/tags/vmc/</link>
-      <pubDate>Wed, 25 Nov 2020 00:00:00 +0000</pubDate>
+      <pubDate>Thu, 03 Dec 2020 00:00:00 +0000</pubDate>
       
       <guid>https://alexdess.cloud/tags/vmc/</guid>
       <description></description>
@@ -67,15 +76,6 @@
       <pubDate>Thu, 31 Oct 2019 00:00:00 +0000</pubDate>
       
       <guid>https://alexdess.cloud/tags/storage/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>Automation</title>
-      <link>https://alexdess.cloud/tags/automation/</link>
-      <pubDate>Sat, 14 Sep 2019 00:00:00 +0000</pubDate>
-      
-      <guid>https://alexdess.cloud/tags/automation/</guid>
       <description></description>
     </item>
     

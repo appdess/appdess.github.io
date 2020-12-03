@@ -13,6 +13,11 @@
   </url>
   
   <url>
+    <loc>https://alexdess.cloud/posts/tkgs-tmc/</loc>
+    <lastmod>2020-12-03T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
     <loc>https://alexdess.cloud/posts/prometheus/</loc>
     <lastmod>2020-08-26T00:00:00+00:00</lastmod>
   </url>
@@ -38,28 +43,33 @@
   </url>
   
   <url>
+    <loc>https://alexdess.cloud/tags/automation/</loc>
+    <lastmod>2020-12-03T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
     <loc>https://alexdess.cloud/tags/k8s/</loc>
-    <lastmod>2020-11-25T00:00:00+00:00</lastmod>
+    <lastmod>2020-12-03T00:00:00+00:00</lastmod>
   </url>
   
   <url>
     <loc>https://alexdess.cloud/posts/</loc>
-    <lastmod>2020-11-25T00:00:00+00:00</lastmod>
+    <lastmod>2020-12-03T00:00:00+00:00</lastmod>
   </url>
   
   <url>
     <loc>https://alexdess.cloud/tags/</loc>
-    <lastmod>2020-11-25T00:00:00+00:00</lastmod>
+    <lastmod>2020-12-03T00:00:00+00:00</lastmod>
   </url>
   
   <url>
     <loc>https://alexdess.cloud/tags/tmc/</loc>
-    <lastmod>2020-11-25T00:00:00+00:00</lastmod>
+    <lastmod>2020-12-03T00:00:00+00:00</lastmod>
   </url>
   
   <url>
     <loc>https://alexdess.cloud/tags/vmc/</loc>
-    <lastmod>2020-11-25T00:00:00+00:00</lastmod>
+    <lastmod>2020-12-03T00:00:00+00:00</lastmod>
   </url>
   
   <url>
@@ -80,11 +90,6 @@
   <url>
     <loc>https://alexdess.cloud/tags/storage/</loc>
     <lastmod>2019-10-31T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://alexdess.cloud/tags/automation/</loc>
-    <lastmod>2019-09-14T00:00:00+00:00</lastmod>
   </url>
   
   <url>

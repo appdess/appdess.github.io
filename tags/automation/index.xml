@@ -6,7 +6,16 @@
     <description>Recent content in Automation on alexdess.cloud</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Sat, 14 Sep 2019 00:00:00 +0000</lastBuildDate><atom:link href="https://alexdess.cloud/tags/automation/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Thu, 03 Dec 2020 00:00:00 +0000</lastBuildDate><atom:link href="https://alexdess.cloud/tags/automation/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>TMC and vSphere with Tanzu</title>
+      <link>https://alexdess.cloud/posts/tkgs-tmc/</link>
+      <pubDate>Thu, 03 Dec 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://alexdess.cloud/posts/tkgs-tmc/</guid>
+      <description>With the recent enhancement Tanzu Mission Control provides an integration between the Tanzu Kubernetes Grid Service running on vSphere 7 and the centralized Control plane &amp;ldquo;Tanzu Mission control&amp;rdquo; running on VMware Cloud. With the new update of Tanzu Mission Control it is possible to register an existing vSphere Supervisor Cluster as Management Cluster. You are then able to provision and lifecycle new Tanzu Kubernetes Clusters directly from TMC. Further support for VMware Cloud on AWS and Azure is on the roadmap and should be available soon.</description>
+    </item>
+    
     <item>
       <title>TKG on VMC</title>
       <link>https://alexdess.cloud/posts/tkgvmc/</link>
