@@ -12,21 +12,21 @@
     <title>TMC and vSphere with Tanzu - alexdess.cloud</title>
 
     
-    <link href="/css/nucleus.css?1607006641" rel="stylesheet">
-    <link href="/css/fontawesome-all.min.css?1607006641" rel="stylesheet">
-    <link href="/css/hybrid.css?1607006641" rel="stylesheet">
-    <link href="/css/featherlight.min.css?1607006641" rel="stylesheet">
-    <link href="/css/perfect-scrollbar.min.css?1607006641" rel="stylesheet">
-    <link href="/css/auto-complete.css?1607006641" rel="stylesheet">
-    <link href="/css/atom-one-dark-reasonable.css?1607006641" rel="stylesheet">
-    <link href="/css/theme.css?1607006641" rel="stylesheet">
-    <link href="/css/hugo-theme.css?1607006641" rel="stylesheet">
+    <link href="/css/nucleus.css?1607009211" rel="stylesheet">
+    <link href="/css/fontawesome-all.min.css?1607009211" rel="stylesheet">
+    <link href="/css/hybrid.css?1607009211" rel="stylesheet">
+    <link href="/css/featherlight.min.css?1607009211" rel="stylesheet">
+    <link href="/css/perfect-scrollbar.min.css?1607009211" rel="stylesheet">
+    <link href="/css/auto-complete.css?1607009211" rel="stylesheet">
+    <link href="/css/atom-one-dark-reasonable.css?1607009211" rel="stylesheet">
+    <link href="/css/theme.css?1607009211" rel="stylesheet">
+    <link href="/css/hugo-theme.css?1607009211" rel="stylesheet">
     
-    <link href="/css/theme-blue.css?1607006641" rel="stylesheet">
+    <link href="/css/theme-blue.css?1607009211" rel="stylesheet">
     
-    <link href="/css/foo.css?1607006641" rel="stylesheet"><link href="/css/bar.css?1607006641" rel="stylesheet">
+    <link href="/css/foo.css?1607009211" rel="stylesheet"><link href="/css/bar.css?1607009211" rel="stylesheet">
 
-    <script src="/js/jquery-3.3.1.min.js?1607006641"></script>
+    <script src="/js/jquery-3.3.1.min.js?1607009211"></script>
 
     <style>
       :root #header + #content > #left > #rlblock_left{
@@ -54,14 +54,14 @@
     <span data-search-clear=""><i class="fas fa-times"></i></span>
 </div>
 
-<script type="text/javascript" src="/js/lunr.min.js?1607006641"></script>
-<script type="text/javascript" src="/js/auto-complete.js?1607006641"></script>
+<script type="text/javascript" src="/js/lunr.min.js?1607009211"></script>
+<script type="text/javascript" src="/js/auto-complete.js?1607009211"></script>
 <script type="text/javascript">
     
         var baseurl = "https:\/\/alexdess.cloud";
     
 </script>
-<script type="text/javascript" src="/js/search.js?1607006641"></script>
+<script type="text/javascript" src="/js/search.js?1607009211"></script>
 
     
   </div>
@@ -109,13 +109,13 @@
  
   
     
-    <li data-nav-id="/posts/tmconvmc/" title="TMC - Tanzu Mission Control" class="dd-item
-        
-        
+    <li data-nav-id="/posts/tkgs-tmc/" title="TMC and vSphere with Tanzu" class="dd-item
+        parent
+        active
         
         ">
-      <a href="/posts/tmconvmc/">
-          TMC - Tanzu Mission Control
+      <a href="/posts/tkgs-tmc/">
+          TMC and vSphere with Tanzu
           
       </a>
       
@@ -135,13 +135,13 @@
  
   
     
-    <li data-nav-id="/posts/tkgs-tmc/" title="TMC and vSphere with Tanzu" class="dd-item
-        parent
-        active
+    <li data-nav-id="/posts/tmconvmc/" title="TMC - Tanzu Mission Control" class="dd-item
+        
+        
         
         ">
-      <a href="/posts/tkgs-tmc/">
-          TMC and vSphere with Tanzu
+      <a href="/posts/tmconvmc/">
+          TMC - Tanzu Mission Control
           
       </a>
       
@@ -361,6 +361,7 @@
   <ul>
     <li>
       <ul>
+        <li><a href="#provision-and-manage-your-tanzu-kubernetes-clusters-with-tmc">Provision and Manage your Tanzu Kubernetes Clusters with TMC</a></li>
         <li><a href="#prepare-the-vsphere-with-tanzu-environment">Prepare the vSphere with Tanzu Environment</a></li>
         <li><a href="#create-a-tanzu-kubernetes-cluster-from-tanzu-mission-control">Create a Tanzu Kubernetes Cluster from Tanzu Mission Control</a></li>
       </ul>
@@ -402,11 +403,19 @@
 
 
 
-	<p>With the recent enhancement Tanzu Mission Control provides an integration between the Tanzu Kubernetes Grid Service running on vSphere 7 and the centralized Control plane &ldquo;Tanzu Mission control&rdquo; running on VMware Cloud.
-With the new update of Tanzu Mission Control it is possible to register an existing vSphere Supervisor Cluster as Management Cluster. You are then able to provision and lifecycle new Tanzu Kubernetes Clusters directly from TMC. Further support for VMware Cloud on AWS and Azure is on the roadmap and should be available soon. Right now you can still manage those Clusters with Tanzu Mission Control by attaching them. The process is described <a href="https://alexdess.cloud/posts/tmconvmc/">here</a>.</p>
-<p>I provisioned my vSphere with Tanzu Lab <a href="https://www.virtuallyghetto.com/2020/11/complete-vsphere-with-tanzu-homelab-with-just-32gb-of-memory.html">based on the Article from my college William Lam</a>. The article provides a link to his github repo and really helps you to ramp up a vSphere with Tanzu lab with minimum resources and effort.</p>
+	<h3 id="provision-and-manage-your-tanzu-kubernetes-clusters-with-tmc">Provision and Manage your Tanzu Kubernetes Clusters with TMC</h3>
+<p>With the recent enhancement Tanzu Mission Control provides an integration between the Tanzu Kubernetes Grid Service running on vSphere 7 and the centralized control plane &ldquo;Tanzu Mission Control&rdquo; running on VMware Cloud.
+With the new update of Tanzu Mission Control it is possible to register an existing vSphere Supervisor Cluster in TMC which enables you to provision and lifecycle new Kubernetes Clusters from TMC directly. Further support for VMware Cloud on AWS and Azure is on the roadmap and should be available soon. Right now you can still manage those Clusters with Tanzu Mission Control by attaching them. The process is described <a href="https://alexdess.cloud/posts/tmconvmc/">here</a>.</p>
+<!-- raw HTML omitted -->
+<p><strong>To follow this tutorial you will need:</strong></p>
+<ul>
+<li><a href="https://www.virtuallyghetto.com/2020/11/complete-vsphere-with-tanzu-homelab-with-just-32gb-of-memory.html">A vSphere with Tanzu Environment</a></li>
+<li><a href="https://console.cloud.vmware.com/">Access to Tanzu Mission Control</a></li>
+<li>A espresso or glass of red wine ;)</li>
+</ul>
+<p>I provisioned my vSphere with Tanzu Lab <a href="https://www.virtuallyghetto.com/2020/11/complete-vsphere-with-tanzu-homelab-with-just-32gb-of-memory.html">based on the Article from my college William Lam</a>. The article provides a link to his github repo and really helps you to ramp up a vSphere with Tanzu lab with minimum resources and effort. If you have a existing VMware Cloud organization you can request access to TMC directly from the console. If not please reach out to VMware in order to request the activation.</p>
 <p><strong>First we logon to Tanzu Mission Control and register our vSphere Supervisor Cluster</strong></p>
-<p>Navigate to Administration &gt; Management Clusters and then click on the Register Management Cluster button in the TMC-UI.</p>
+<p>Navigate to <strong>Administration</strong> &gt; <strong>Management Clusters</strong> and then click on the <strong>Register Management Cluster</strong> button in the TMC-UI.</p>
 <p><img src="../tkgs-tmc/images/register1.png?classes=shadow&amp;width=50pc" alt=""></p>
 <p><strong>On the Register pane, copy the provided registration URL</strong></p>
 <p><img src="../tkgs-tmc/images/register2.png?classes=shadow&amp;width=50pc" alt=""></p>
@@ -452,7 +461,7 @@ Status:
 Events:     &lt;none&gt;
 </code></pre></div><p><strong>After this is complete you should be able to see the vSphere Supervisor Cluster registered in Tanzu Mission Control as well:</strong>
 <img src="../tkgs-tmc/images/mgmt-cluster.png?classes=shadow&amp;width=70pc" alt=""></p>
-<p>We have successfully registered our vSphere Supervisor Cluster with Tanzu Mission Control. We see that our Workload Clusters which are already provisioned have been discovered. From now on we can leverage Tanzu Mission Control to deploy new Tanzu Kubernetes Clusters on our on Prem vSphere Environment.</p>
+<p>We have successfully registered our vSphere Supervisor Cluster with Tanzu Mission Control. We see that our Workload Clusters which are already provisioned have been discovered. From now on we can leverage Tanzu Mission Control to deploy new Tanzu Kubernetes Clusters on our On Prem vSphere Environment.</p>
 <h3 id="create-a-tanzu-kubernetes-cluster-from-tanzu-mission-control">Create a Tanzu Kubernetes Cluster from Tanzu Mission Control</h3>
 <p><strong>From now on we can create Clusters from Tanzu Mission Control on our vSphere with Tanzu enabled Cluster.</strong>
 When you go Back to &ldquo;Clusters&rdquo; and hit the &ldquo;Create Cluster&rdquo; Button you will notice, that there is a new option to create Clusters now on our vSphere based TKGs Environment.
@@ -465,12 +474,12 @@ When you go Back to &ldquo;Clusters&rdquo; and hit the &ldquo;Create Cluster&rdq
 <img src="../tkgs-tmc/images/create1.png?classes=shadow&amp;width=40pc" alt=""></p>
 <p><strong>Next we will assign a Cluster name and attach it to a Cluster Group. If you want to learn more about Cluster Groups and Namespaces i recommend to checkout my <a href="https://alexdess.cloud/posts/tmconvmc/">previous post about Tanzu Mission Control.</a></strong>
 <img src="../tkgs-tmc/images/create2.png?classes=shadow&amp;width=40pc" alt=""></p>
-<p>In the configuration step we can select our <strong>K8s Version</strong>, <strong>CIDR-Ranges</strong> and the <strong>Storage Classes</strong> which we want to use. You can also select a default storage class in case you are working with multiple storage classes in your environment.
+<p>In the configuration step we can select our <strong>K8s Version</strong>, <strong>CIDR-Ranges</strong> and the <strong>Storage classes</strong> which we want to use. You can also select a default storage class in case you are working with multiple storage classes in your environment.
 <img src="../tkgs-tmc/images/create3.png?classes=shadow&amp;width=40pc" alt=""></p>
-<p>In Step 4 we can select our <strong>Control Plane Instance types</strong> and whether we want a highly available <strong>Production</strong> or a single node control plane for a <strong>Development</strong> Cluster.<!-- raw HTML omitted -->
-This equals the Virtual Machine Class which you can set  a Tanzu Kubernetes Cluster from a yaml file. For more insights regarding machine classes <a href="https://docs.vmware.com/en/VMware-vSphere/7.0/vmware-vsphere-with-tanzu/GUID-7351EEFF-4EF0-468F-A19B-6CEA40983D3D.html">please have a look here.</a>
+<p>In Step 4 we can select our <strong>Control Plane instance types</strong> and whether we want a highly available <strong>Production</strong> or a single node control plane for a <strong>Development</strong> Cluster.<!-- raw HTML omitted -->
+This equals the &ldquo;Virtual Machine Class&rdquo; which you can set when deploying a Tanzu Kubernetes Cluster in the yaml file. For more insights regarding machine classes <a href="https://docs.vmware.com/en/VMware-vSphere/7.0/vmware-vsphere-with-tanzu/GUID-7351EEFF-4EF0-468F-A19B-6CEA40983D3D.html">please have a look here.</a>
 <img src="../tkgs-tmc/images/create4.png?classes=shadow&amp;width=40pc" alt=""></p>
-<p>In Step 5 we can select our <strong>Worker Instance Types</strong> and the Storage Class which we want to use.
+<p>In Step 5 we can select our <strong>Worker instance types</strong> and the <strong>Storage class</strong> which we want to use.
 <img src="../tkgs-tmc/images/create5.png?classes=shadow&amp;width=40pc" alt=""></p>
 <p>That´s it. Let´s hit the <strong>&ldquo;CREATE CLUSTER&rdquo;</strong> Button and wait for the provisioning to happen.
 <img src="../tkgs-tmc/images/cluster-creation-tmc.png?classes=shadow&amp;width=40pc" alt=""></p>
@@ -478,7 +487,7 @@ This equals the Virtual Machine Class which you can set  a Tanzu Kubernetes Clus
 <img src="../tkgs-tmc/images/cluster-creation-vsphere.png?classes=shadow&amp;width=30pc" alt=""></p>
 <p>After the provisioning is finsihed we see that our Cluster is healthy in TMC and we can now logon to the new cluster. Hit the button <strong>&ldquo;Actions&rdquo;</strong> and select <strong>&ldquo;Access this cluster&rdquo;</strong> to retreive the kubeconfig.
 <img src="../tkgs-tmc/images/tkc-tmc-access.png?classes=shadow&amp;width=40pc" alt=""></p>
-<p>Another huge improvement is the integration with IAM. We are now able to retrieve the corresponding kubeconfig file directly from Tanzu Mission control which makes it easier for different teams to gain access to this Cluster.
+<p>A huge improvement is the integration with IAM when you provision a Cluster from TMC. We are now able to retrieve the corresponding kubeconfig file directly from Tanzu Mission Control which makes it easier for different teams to gain access to this Cluster.
 <img src="../tkgs-tmc/images/tkc-tmc-created.png?classes=shadow&amp;width=30pc" alt=""></p>
 <p>I´ve downloaded the kubeconfig file which contains the secret and can now use it to interact with the provisioned Cluster:</p>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">$ kubectl --kubeconfig<span style="color:#f92672">=</span>/Users/adess/Downloads/kubeconfig-tmc-tkg.yml get namespaces
@@ -492,7 +501,7 @@ vmware-system-cloud-provider   Active   147m
 vmware-system-csi              Active   147m
 vmware-system-tmc              Active   147m
 </code></pre></div><p><strong>If you are working with the kubectl-vsphere plugin you can still use the vsphere-kubectl like for any other Tanzu Kubernetes Cluster on vSphere to authenticate.</strong></p>
-<p>Below I´m running the authentication process via the kubectl-vsphere plugin and issueing the exact same command as with the retrieved kubeconfig from above. We see that the output is exactly the same.</p>
+<p>Below I´m running the authentication process via the kubectl-vsphere plugin and issueing the exact same command as with the retrieved kubeconfig from above. Logically the output is exactly the same.</p>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">$ kubectl-vsphere login --vsphere-username administrator@vsphere.local --server<span style="color:#f92672">=</span>10.10.0.64 --insecure-skip-tls-verify --tanzu-kubernetes-cluster-name tmc-tkg --tanzu-kubernetes-cluster-namespace adess1
 
 $ kubectl get namespaces
@@ -506,6 +515,7 @@ vmware-system-cloud-provider   Active   149m
 vmware-system-csi              Active   149m
 vmware-system-tmc              Active   149m
 </code></pre></div><p>I am impressed how easy and straight forward this was to implement. TMC provides a centralized control plane for all Kubernetes Clusters running in the Cloud or On Premises and provides a graphical interface to provision and manage all your Clusters. Looking forward to the coming integrations. Right now we see that TMC really helps to keep a easy and streamlined appraoch to enable Development teams in gaining more flexibility while ensuring a safe and secure environment applied by policies of the operators.</p>
+<p>As usual feedback is welcome and feel free to reach out in case you found errors or have suggestions.</p>
 <p><strong>Links:</strong></p>
 <ul>
 <li><a href="https://kb.vmware.com/s/article/80727">The official KB</a></li>
@@ -568,25 +578,6 @@ vmware-system-tmc              Active   149m
             
                 
                     
-                        
-                        
-                    
-                
-                
-
-                    
-                    
-                    
-
-                    
-            
-        
-                    
-                        
-            
-            
-                
-                    
                     
                 
                 
@@ -606,6 +597,22 @@ vmware-system-tmc              Active   149m
                     
                         
                         
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
                     
                 
                 
@@ -700,19 +707,19 @@ vmware-system-tmc              Active   149m
     <div style="left: -1000px; overflow: scroll; position: absolute; top: -1000px; border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;">
       <div style="border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;"></div>
     </div>
-    <script src="/js/clipboard.min.js?1607006641"></script>
-    <script src="/js/perfect-scrollbar.min.js?1607006641"></script>
-    <script src="/js/perfect-scrollbar.jquery.min.js?1607006641"></script>
-    <script src="/js/jquery.sticky.js?1607006641"></script>
-    <script src="/js/featherlight.min.js?1607006641"></script>
-    <script src="/js/highlight.pack.js?1607006641"></script>
+    <script src="/js/clipboard.min.js?1607009211"></script>
+    <script src="/js/perfect-scrollbar.min.js?1607009211"></script>
+    <script src="/js/perfect-scrollbar.jquery.min.js?1607009211"></script>
+    <script src="/js/jquery.sticky.js?1607009211"></script>
+    <script src="/js/featherlight.min.js?1607009211"></script>
+    <script src="/js/highlight.pack.js?1607009211"></script>
     <script>hljs.initHighlightingOnLoad();</script>
-    <script src="/js/modernizr.custom-3.6.0.js?1607006641"></script>
-    <script src="/js/learn.js?1607006641"></script>
-    <script src="/js/hugo-learn.js?1607006641"></script>
+    <script src="/js/modernizr.custom-3.6.0.js?1607009211"></script>
+    <script src="/js/learn.js?1607009211"></script>
+    <script src="/js/hugo-learn.js?1607009211"></script>
     
         
-            <script src="/mermaid/mermaid.js?1607006641"></script>
+            <script src="/mermaid/mermaid.js?1607009211"></script>
         
         <script>
             mermaid.initialize({ startOnLoad: true });

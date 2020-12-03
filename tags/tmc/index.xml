@@ -8,6 +8,15 @@
     <language>en-us</language>
     <lastBuildDate>Thu, 03 Dec 2020 00:00:00 +0000</lastBuildDate><atom:link href="https://alexdess.cloud/tags/tmc/index.xml" rel="self" type="application/rss+xml" />
     <item>
+      <title>TMC and vSphere with Tanzu</title>
+      <link>https://alexdess.cloud/posts/tkgs-tmc/</link>
+      <pubDate>Thu, 03 Dec 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://alexdess.cloud/posts/tkgs-tmc/</guid>
+      <description>Provision and Manage your Tanzu Kubernetes Clusters with TMC With the recent enhancement Tanzu Mission Control provides an integration between the Tanzu Kubernetes Grid Service running on vSphere 7 and the centralized control plane &amp;ldquo;Tanzu Mission Control&amp;rdquo; running on VMware Cloud. With the new update of Tanzu Mission Control it is possible to register an existing vSphere Supervisor Cluster in TMC which enables you to provision and lifecycle new Kubernetes Clusters from TMC directly.</description>
+    </item>
+    
+    <item>
       <title>TMC - Tanzu Mission Control</title>
       <link>https://alexdess.cloud/posts/tmconvmc/</link>
       <pubDate>Wed, 25 Nov 2020 00:00:00 +0000</pubDate>
@@ -15,15 +24,6 @@
       <guid>https://alexdess.cloud/posts/tmconvmc/</guid>
       <description>Consistent K8s security and operations across Teams and Clouds In this Blogpost we will use a Tanzu Kubernetes Grid Cluster deployed on VMware Cloud on AWS and integrate it with Tanzu Mission Control. We will make use of the Identity and Access Management, Compliance Policy Enigne and integrated Backup Capabilties of Tanzu Mission Control.
 The Tanzu Portfolio The VMware Tanzu portfolio is a set of products which has the goal to modernize your infrastructure and applications in order to deliver better software to production - fast, secure and continuously.</description>
-    </item>
-    
-    <item>
-      <title>TMC and vSphere with Tanzu</title>
-      <link>https://alexdess.cloud/posts/tkgs-tmc/</link>
-      <pubDate>Thu, 03 Dec 2020 00:00:00 +0000</pubDate>
-      
-      <guid>https://alexdess.cloud/posts/tkgs-tmc/</guid>
-      <description>With the recent enhancement Tanzu Mission Control provides an integration between the Tanzu Kubernetes Grid Service running on vSphere 7 and the centralized Control plane &amp;ldquo;Tanzu Mission control&amp;rdquo; running on VMware Cloud. With the new update of Tanzu Mission Control it is possible to register an existing vSphere Supervisor Cluster as Management Cluster. You are then able to provision and lifecycle new Tanzu Kubernetes Clusters directly from TMC. Further support for VMware Cloud on AWS and Azure is on the roadmap and should be available soon.</description>
     </item>
     
   </channel>
